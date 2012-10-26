@@ -1,0 +1,7 @@
+%backup%~
+auto-save-list*
+backups
+elpa
+tramp
+vendor
+aksarkar/aksarkar-rcirc-auth.el
