@@ -68,6 +68,9 @@
 ; Always display line number
 (setq line-number-display-limit nil)
 
+; Always indent using spaces
+(setq-default indent-tabs-mode nil)
+
 ; When mark is active, highlight selected region
 (transient-mark-mode 1)
 
