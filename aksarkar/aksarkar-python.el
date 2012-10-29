@@ -7,7 +7,7 @@
 (setq py-shell-switch-buffers-on-execute-p nil)
 (setq py-shell-toggle-1 "python2")
 (setq py-shell-toggle-2 "python3")
-(setq py-split-windows-on-execute-function 'split-window-horizontally)
+(setq-default py-split-windows-on-execute-function 'split-window-horizontally)
 (setq py-start-run-py-shell nil)
 (setq py-verbose-p nil)
 
