@@ -9,7 +9,7 @@
                ("emacs" (name . "^\\*.*\\*$"))))))
 (setq ibuffer-show-empty-filter-groups nil)
 
-(defun aksarkar-ibuffer-hook
+(defun aksarkar-ibuffer-hook ()
   (ibuffer-switch-to-saved-filter-groups "default"))
 (add-hook 'ibuffer-mode-hook 'aksarkar-ibuffer-hook)
 
