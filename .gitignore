@@ -1,7 +1,8 @@
 %backup%~
-auto-save-list*
+aksarkar/aksarkar-rcirc-auth.el
+auto-save-list
 backups
 elpa
 tramp
+url
 vendor
-aksarkar/aksarkar-rcirc-auth.el
