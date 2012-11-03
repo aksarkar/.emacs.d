@@ -1,6 +1,6 @@
 ; My solarized colors
 (add-to-list 'custom-theme-load-path 
-	     "~/.emacs.d/vendor/emacs-color-theme-solarized")
+	     "~/.emacs.d/vendor/solarized")
 (load-theme 'solarized-light t)
 
 ; Get around UNIX selection nonsense
