@@ -17,3 +17,4 @@
 (require 'aksarkar-keyboard)
 (require 'aksarkar-python)
 (require 'aksarkar-rcirc)
+(require 'aksarkar-tex)
