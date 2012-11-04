@@ -1,3 +1,5 @@
+(require 'tex-mode)
+
 (add-to-list 'tex-compile-commands 
              '("xelatex --papersize=letter %r" "%r.tex" "%r.pdf"))
 
