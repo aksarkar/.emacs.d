@@ -9,6 +9,7 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 (require 'aksarkar-browse)
+(require 'aksarkar-eshell)
 (require 'aksarkar-git)
 (require 'aksarkar-gui)
 (require 'aksarkar-haskell)
