@@ -3,6 +3,11 @@
 	     "~/.emacs.d/vendor/solarized")
 (load-theme 'solarized-light t)
 
+(defun aksarkar-night ()
+  (interactive)
+  (load-theme 'solarized-dark t)
+  (set-frame-font "Source Code Pro-13"))
+
 ; Get around UNIX selection nonsense
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
