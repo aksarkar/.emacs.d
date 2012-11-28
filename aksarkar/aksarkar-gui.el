@@ -6,7 +6,12 @@
 (defun aksarkar-night ()
   (interactive)
   (load-theme 'solarized-dark t)
-  (set-frame-font "Source Code Pro-13"))
+  (set-frame-font "Consolas-12"))
+
+(defun aksarkar-day ()
+  (interactive)
+  (load-theme 'solarized-light t)
+  (set-frame-font "Consolas-8.5"))
 
 ; Get around UNIX selection nonsense
 (setq x-select-enable-clipboard t)
