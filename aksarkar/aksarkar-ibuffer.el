@@ -6,6 +6,8 @@
       (quote (("default"
                ("irc" (mode . rcirc-mode))
                ("git" (name . "^\\*git.*\\*"))
+               ("shell" (or (mode . eshell-mode)
+                            (mode . shell-mode)))
                ("emacs" (name . "^\\*.*\\*$"))))))
 (setq ibuffer-show-empty-filter-groups nil)
 
