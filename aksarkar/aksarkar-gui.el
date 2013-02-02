@@ -1,22 +1,8 @@
 ; My solarized colors
 (add-to-list 'custom-theme-load-path 
 	     "~/.emacs.d/vendor/solarized")
-(setq solarized-diff-mode 'low)
+(setq solarized-terminal-colors-for-daemon t)
 (load-theme 'solarized-light t)
-
-(defun aksarkar-night ()
-  (interactive)
-  (load-theme 'solarized-dark t)
-  (set-frame-font "Consolas-12" nil t))
-
-(defun aksarkar-day ()
-  (interactive)
-  (load-theme 'solarized-light t)
-  (set-frame-font "Consolas-8.5" nil t))
-
-; Get around UNIX selection nonsense
-(setq x-select-enable-clipboard t)
-(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
 ; Set window title
 (setq frame-title-format '(buffer-file-name "%f - Emacs" "Emacs")) 
@@ -40,8 +26,6 @@
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups/")))
 
 ; Remove superfluous GUI
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
 (menu-bar-mode -1)
 
 ; Disable splash screen
@@ -95,11 +79,16 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
+<<<<<<< HEAD
 ; Scroll compilation mode
 (setq compilation-scroll-output 'first-error)
 
 (defun kill-this-buffer ()
   (interactive)
   (kill-buffer (current-buffer)))
+=======
+; Suppress useless warnings
+(setq warning-suppress-types '((alloc)))
+>>>>>>> Add ESS tweaks
 
 (provide 'aksarkar-gui)
