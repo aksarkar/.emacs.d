@@ -16,3 +16,4 @@
 (require 'aksarkar-ispell)
 (require 'aksarkar-keyboard)
 (require 'aksarkar-python)
+(require 'aksarkar-shell)
