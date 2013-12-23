@@ -1,5 +1,6 @@
 (require 'rcirc)
 (require 'aksarkar-rcirc-auth)
+(require 'expand-region)
 
 (defadvice rcirc-markup-attributes (before rcirc-fix-italics activate)
   "Fix italic control character"
@@ -82,8 +83,23 @@
   (rcirc-update-activity-string)
   (force-mode-line-update t))
 
-(define-key rcirc-mode-map (kbd "C-c C-o") 'rcirc-cmd-oper)
-(define-key rcirc-mode-map (kbd "C-c q") 'rcirc-cmd-quote)
 (define-key rcirc-mode-map (kbd "M-o") 'rcirc-omit-mode)
+
+(defun er/mark-rcirc-line ()
+  "Mark the current line"
+  (interactive)
+  (let ((pattern (concat "^\\([0-9]\\|" rcirc-prompt "\\)")))
+    (if (looking-at pattern) (next-line))
+    (search-forward-regexp pattern)
+    (forward-line 0)
+    (push-mark (point) t t)
+    (search-backward-regexp pattern)))
+
+(defun er/add-rcirc-mode-expansions ()
+  (interactive)
+  (make-variable-buffer-local 'er/try-expand-list)
+  (setq er/try-expand-list (append er/try-expand-list '(er/mark-rcirc-line))))
+
+(add-hook 'rcirc-mode-hook 'er/add-rcirc-mode-expansions)
 
 (provide 'aksarkar-rcirc)
