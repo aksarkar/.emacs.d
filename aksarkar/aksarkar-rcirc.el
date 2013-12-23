@@ -48,10 +48,12 @@
     (rcirc-send-string process (concat "TOPIC " target
                                        (concat " :" topic " | " rcirc-topic)))))
 
+(setq gnutls-min-prime-bits 1024)
 (setq rcirc-server-alist
       '(("irc.foonetic.net" :port 6697 :channels ("#xkcd" "#xkcd-compsci")
          :encryption tls)
-        ("im.bitlbee.org" :channels ("&bitlbee"))))
+        ("im.bitlbee.org" :channels ("&bitlbee"))
+        ("irc.freenode.org" :port 6697 :encryption tls)))
 (setq rcirc-default-full-name "A. Sarkar")
 (setq rcirc-default-user-name "asarkar")
 (setq rcirc-fill-prefix "      ")
