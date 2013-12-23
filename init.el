@@ -16,6 +16,7 @@
 (require 'aksarkar-ibuffer)
 (require 'aksarkar-ispell)
 (require 'aksarkar-keyboard)
+(require 'aksarkar-org)
 (require 'aksarkar-mu4e)
 (require 'aksarkar-python)
 (require 'aksarkar-rcirc)
