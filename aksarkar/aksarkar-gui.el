@@ -1,17 +1,18 @@
 ; My solarized colors
 (add-to-list 'custom-theme-load-path 
 	     "~/.emacs.d/vendor/solarized")
+(setq solarized-diff-mode 'low)
 (load-theme 'solarized-light t)
 
 (defun aksarkar-night ()
   (interactive)
   (load-theme 'solarized-dark t)
-  (set-frame-font "Consolas-12"))
+  (set-frame-font "Consolas-12" nil t))
 
 (defun aksarkar-day ()
   (interactive)
   (load-theme 'solarized-light t)
-  (set-frame-font "Consolas-8.5"))
+  (set-frame-font "Consolas-8.5" nil t))
 
 ; Get around UNIX selection nonsense
 (setq x-select-enable-clipboard t)
