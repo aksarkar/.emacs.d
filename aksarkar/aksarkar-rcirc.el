@@ -65,13 +65,14 @@
 
 (add-to-list 'rcirc-response-formats '("ACTION" . "* %N %m"))
 
-(add-hook 'rcirc-mode-hook 
-          '(lambda()
-             (rcirc-track-minor-mode 1)
-             (rcirc-omit-mode)
-             (flyspell-mode 1)
-             (if (member (buffer-name) rcirc-low-priority-chans)
-                 (setq rcirc-low-priority-flag t))))
+(defun aksarkar-rcirc-hook ()
+  (rcirc-track-minor-mode 1)
+  (rcirc-omit-mode)
+  (flyspell-mode 1)
+  (if (member (buffer-name) rcirc-low-priority-chans)
+      (setq rcirc-low-priority-flag t)))
+
+(add-hook 'rcirc-mode-hook 'aksarkar-rcirc-hook)
 
 (defun rcirc-mode-p (buffer-name)
   (eq (buffer-local-value 'major-mode (get-buffer buffer-name)) 'rcirc-mode))
