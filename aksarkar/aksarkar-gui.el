@@ -94,4 +94,7 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
+; Scroll compilation mode
+(setq compilation-scroll-output 'first-error)
+
 (provide 'aksarkar-gui)
