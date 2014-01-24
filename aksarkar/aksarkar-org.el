@@ -1,5 +1,6 @@
 (require 'ox-beamer)
 (require 'ox-latex)
+(require 'org-bibtex)
 (require 'org-latex)
 
 (setq org-file-apps
@@ -31,5 +32,22 @@
 (add-to-list 'org-export-filter-bold-functions 'aksarkar-beamer-bold)
 
 (setq org-latex-pdf-process '("latexmk -silent -xelatex %b"))
+
+(setq org-bibtex-export-arbitrary-fields t
+      org-bibtex-prefix "BIB_")
+
+(org-add-link-type "pmid" 'aksarkar-org-pmid-open)
+(defun aksarkar-org-pmid-open (path)
+  (browse-url (concat "https://www.ncbi.nlm.nih.gov/pubmed/" path)))
+
+(defun aksarkar-org-hook ()
+  (bibtex-set-dialect 'BibTeX)
+  (auto-fill-mode t))
+
+(add-hook 'org-mode-hook 'aksarkar-org-hook)
+
+(define-key org-mode-map (kbd "H-e") 'org-export-dispatch)
+(define-key org-mode-map (kbd "H-r") 'org-bibtex-read-file)
+(define-key org-mode-map (kbd "H-w") 'org-bibtex-write)
 
 (provide 'aksarkar-org)
