@@ -9,5 +9,12 @@
 (global-set-key "\M-&" 'replace-regexp)
 (global-set-key "\M-h" 'er/expand-region)
 (global-set-key "\M-m" 'ace-jump-mode)
+(global-set-key (kbd "H-a") 'org-agenda-list)
+(global-set-key (kbd "H-d") 'aksarkar-day)
+(global-set-key (kbd "H-e") 'eshell)
+(global-set-key (kbd "H-i") 'irc)
+(global-set-key (kbd "H-n") 'aksarkar-night)
+(global-set-key (kbd "H-s") 'shell)
+(global-set-key (kbd "H-f") 'find-file-at-point)
 
 (provide 'aksarkar-keyboard)
