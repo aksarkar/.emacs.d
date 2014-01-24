@@ -53,7 +53,6 @@
 (setq rcirc-server-alist
       '(("irc.foonetic.net" :port 6697 :channels ("#xkcd" "#xkcd-compsci")
          :encryption tls)
-        ("im.bitlbee.org" :channels ("&bitlbee"))
         ("irc.freenode.org" :port 6697 :encryption tls)))
 (setq rcirc-default-full-name "A. Sarkar")
 (setq rcirc-default-user-name "asarkar")
