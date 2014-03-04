@@ -97,4 +97,8 @@
 ; Scroll compilation mode
 (setq compilation-scroll-output 'first-error)
 
+(defun kill-this-buffer ()
+  (interactive)
+  (kill-buffer (current-buffer)))
+
 (provide 'aksarkar-gui)
