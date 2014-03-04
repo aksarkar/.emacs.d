@@ -19,6 +19,7 @@
 (global-set-key (kbd "H-i") 'irc)
 (global-set-key (kbd "H-m") 'magit-status)
 (global-set-key (kbd "H-n") 'aksarkar-night)
+(global-set-key (kbd "H-r") 'elfeed)
 (global-set-key (kbd "H-s") 'shell)
 (global-set-key (kbd "M-`") '(lambda () (interactive) (set-mark-command t)))
 

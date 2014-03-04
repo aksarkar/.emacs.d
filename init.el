@@ -12,6 +12,7 @@
 (require 'aksarkar-eshell)
 (require 'aksarkar-git)
 (require 'aksarkar-gui)
+(require 'aksarkar-elfeed)
 (require 'aksarkar-haskell)
 (require 'aksarkar-ibuffer)
 (require 'aksarkar-ispell)
