@@ -26,6 +26,19 @@
 [NO-PACKAGES]"
    ("\\section{%s}" . "\\section*{%s}")))
 
+(add-to-list 'org-latex-classes
+             '("aksarkar-article"
+               "\\documentclass{article}
+\\usepackage[letterpaper]{geometry}
+\\usepackage{palatino}
+\\usepackage{mathpazo}
+\\usepackage{hyperref}
+[NO-DEFAULT-PACKAGES]
+[NO-PACKAGES]"
+   ("\\section{%s}" . "\\section*{%s}")
+   ("\\subsection{%s}" . "\\subsection*{%s}")))
+
+
 (defun aksarkar-beamer-bold (contents backend info)
   (when (eq backend 'beamer)
     (replace-regexp-in-string "\\`\\\\[A-Za-z0-9]+" "\\\\textbf" contents)))
