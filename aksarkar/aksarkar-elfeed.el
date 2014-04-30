@@ -41,6 +41,7 @@
         "http://www.megatokyo.com/rss/megatokyo.xml"
         "http://www.scottaaronson.com/blog/?feed=rss2"
         )
-      elfeed-search-filter "@1-week")
+      elfeed-search-clipboard-type 'CLIPBOARD
+      elfeed-search-filter "+unread")
 
 (provide 'aksarkar-elfeed)
