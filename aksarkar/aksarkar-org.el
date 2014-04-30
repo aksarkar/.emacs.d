@@ -6,11 +6,21 @@
 (setq org-file-apps
       '((auto-mode . emacs)
         ("\\.pdf\\'" . "mupdf %s")
-        ("\\.eps\\'" . "evince %s")))
+        ("\\.eps\\'" . "evince %s"))
+      org-latex-default-packages-alist
+      '(("" "graphicx" t)
+        ("" "longtable" nil)
+        ("" "float" nil)
+        ("" "fontspec" t)
+        ("" "xunicode" t)
+        ("" "unicode-math")
+        ("" "biblatex" nil)
+        ("xetex" "hyperref" nil)
+        ("" "rotating" t)))
 
 (add-to-list 'org-latex-classes
              '("aksarkar-beamer"
-               "\\documentclass{beamer}
+"\\documentclass{beamer}
 \\mode<presentation>
 \\usecolortheme[named=black]{structure}
 \\usefonttheme{serif}
@@ -21,30 +31,55 @@
 \\usepackage{unicode-math}
 \\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
 \\setmainfont{Charis SIL}
-\\setmathfont[Alternate=1]{Asana Math}
-[NO-DEFAULT-PACKAGES]
-[NO-PACKAGES]"
+\\setmathfont[Alternate=1]{Asana Math}"
    ("\\section{%s}" . "\\section*{%s}")))
 
 (add-to-list 'org-latex-classes
              '("aksarkar-article"
-               "\\documentclass{article}
+"\\documentclass{article}
 \\usepackage[letterpaper]{geometry}
-\\usepackage{palatino}
-\\usepackage{mathpazo}
-\\usepackage{hyperref}
-[NO-DEFAULT-PACKAGES]
-[NO-PACKAGES]"
+ [DEFAULT-PACKAGES]
+\\defaultfontfeatures{Mapping=tex-text}
+\\setmainfont{Palatino Linotype}
+\\setmathfont{Asana Math}"
    ("\\section{%s}" . "\\section*{%s}")
    ("\\subsection{%s}" . "\\subsection*{%s}")))
 
+(add-to-list 'org-latex-classes
+             '("aksarkar-nature"
+"\\documentclass{article}
+ [NO-DEFAULT-PACKAGES]
+\\usepackage{amsmath}
+\\usepackage[letterpaper]{geometry}
+\\usepackage{graphicx}
+\\usepackage{longtable}
+\\usepackage{float}
+\\usepackage{fontspec}
+\\usepackage{xunicode}
+\\usepackage{unicode-math}
+\\usepackage[style=nature]{biblatex}
+\\usepackage[xetex]{hyperref}
+\\usepackage{rotating}
+
+\\defaultfontfeatures{Mapping=tex-text}
+\\setmainfont{Palatino Linotype}
+\\setmathfont{Asana Math}
+\\setmonofont{Consolas}
+
+\\setlength{\\parindent}{0pt}
+\\setlength{\\parskip}{1em}
+\\renewcommand{\\baselinestretch}{1.2}
+
+\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}"
+   ("\\section{%s}" . "\\section*{%s}")
+   ("\\subsection{%s}" . "\\subsection*{%s}")))
 
 (defun aksarkar-beamer-bold (contents backend info)
   (when (eq backend 'beamer)
     (replace-regexp-in-string "\\`\\\\[A-Za-z0-9]+" "\\\\textbf" contents)))
 (add-to-list 'org-export-filter-bold-functions 'aksarkar-beamer-bold)
 
-(setq org-latex-pdf-process '("latexmk -silent -xelatex %b"))
+(setq org-latex-pdf-process '("latexmk -silent -xelatex %f"))
 
 (setq org-bibtex-export-arbitrary-fields t
       org-bibtex-prefix "BIB_")
