@@ -1,11 +1,13 @@
 (require 'elfeed)
 
 (setq elfeed-feeds
-      '("https://firstlook.org/theintercept/feed/"
+      '("https://al3x.net/atom.xml"
+        "https://firstlook.org/theintercept/feed/"
         "https://henrytcs.wordpress.com/feed/"
         "http://33bits.org/feed/"
         "http://apenwarr.ca/log/rss.php"
         "http://blog.computationalcomplexity.org/feeds/posts/default"
+        "http://blog.cryptographyengineering.com/feeds/posts/default"
         "http://blog.regehr.org/feed"
         "http://commandcenter.blogspot.com/feeds/posts/default"
         "http://compmeta.wordpress.com/feed/"
@@ -30,6 +32,7 @@
         "http://planet.emacsen.org/atom.xml"
         "http://prog21.dadgum.com/atom.xml"
         "http://rjlipton.wordpress.com/feed/"
+        "http://www.spiegel.de/international/index.rss"
         "http://themonadreader.wordpress.com/feed/"
         "http://www.archlinux.org/feeds/news/"
         "http://www.escapistmagazine.com/rss/videos/list/1.xml"
