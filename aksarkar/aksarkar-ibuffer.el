@@ -5,7 +5,7 @@
 (setq ibuffer-saved-filter-groups
       (quote (("default"
                ("irc" (mode . rcirc-mode))
-               ("git" (name . "^\\*git.*\\*"))
+               ("magit" (derived-mode . magit-mode))
                ("shell" (or (mode . eshell-mode)
                             (mode . shell-mode)))
                ("emacs" (name . "^\\*.*\\*$"))))))
