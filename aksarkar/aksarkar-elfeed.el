@@ -1,16 +1,16 @@
 (require 'elfeed)
 
 (setq elfeed-feeds
-      '("https://al3x.net/atom.xml"
-        "https://firstlook.org/theintercept/feed/"
-        "https://henrytcs.wordpress.com/feed/"
+      '(
         "http://33bits.org/feed/"
+        "http://alltom.com/feed.atom"
         "http://apenwarr.ca/log/rss.php"
         "http://blog.computationalcomplexity.org/feeds/posts/default"
         "http://blog.cryptographyengineering.com/feeds/posts/default"
         "http://blog.regehr.org/feed"
         "http://commandcenter.blogspot.com/feeds/posts/default"
         "http://compmeta.wordpress.com/feed/"
+        "http://www.cs.uni.edu/~wallingf/blog/index.xml"
         "http://dabeaz.blogspot.com/feeds/posts/default"
         "http://donsbot.wordpress.com/feed/"
         "http://elliotth.blogspot.com/feeds/posts/default"
@@ -22,7 +22,6 @@
         "http://feeds.feedburner.com/sportsblogs/tarheelblog.xml"
         "http://feeds.feedburner.com/vivekhaldar"
         "http://gdata.youtube.com/feeds/api/users/insidepoolmag/uploads?orderby=updated"
-        "http://gdata.youtube.com/feeds/api/users/maxeberle/uploads?orderby=updated"
         "http://gdata.youtube.com/feeds/api/users/merlinidota/uploads?orderby=updated"
         "http://gdata.youtube.com/feeds/api/users/nkmedtner/uploads?orderby=updated"
         "http://lambda-the-ultimate.org/rss.xml"
@@ -32,14 +31,18 @@
         "http://planet.emacsen.org/atom.xml"
         "http://prog21.dadgum.com/atom.xml"
         "http://rjlipton.wordpress.com/feed/"
-        "http://www.spiegel.de/international/index.rss"
         "http://themonadreader.wordpress.com/feed/"
         "http://www.archlinux.org/feeds/news/"
         "http://www.escapistmagazine.com/rss/videos/list/1.xml"
         "http://www.ethanzuckerman.com/blog/feed/"
         "http://www.guardian.co.uk/profile/glenn-greenwald/rss"
         "http://www.megatokyo.com/rss/megatokyo.xml"
+        "http://www.randomprogramming.com/feed/"
         "http://www.scottaaronson.com/blog/?feed=rss2"
+        "http://www.spiegel.de/international/index.rss"
+        "https://firstlook.org/theintercept/feed/"
+        "https://henrytcs.wordpress.com/feed/"
+        "https://al3x.net/atom.xml"
         )
       elfeed-search-clipboard-type 'CLIPBOARD
       elfeed-search-filter "+unread")
