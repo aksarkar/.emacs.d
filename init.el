@@ -19,6 +19,5 @@
 (require 'aksarkar-keyboard)
 (require 'aksarkar-org)
 (require 'aksarkar-mu4e)
-(require 'aksarkar-python)
 (require 'aksarkar-rcirc)
 (require 'aksarkar-tex)
