@@ -66,15 +66,16 @@
 (line-number-mode 1)
 (column-number-mode 1)
 (which-function-mode 1)
-(setq default-mode-line-format
-      (quote ("-" (line-number-mode "L%l-")
-	      (column-number-mode "C%c-")
-	      mode-line-modified mode-line-frame-identification
-	      mode-line-buffer-identification " "
-	      global-mode-string " ("
-	      mode-name mode-line-process minor-mode-alist "%n" ")-"
-	      (which-func-mode ("" which-func-format "-"))
-          (-3 . "%p") "-%-")))
+(setq-default mode-line-format
+      '((line-number-mode " L%l ")
+        (column-number-mode "C%c ")
+        mode-line-modified
+        " "
+        mode-line-buffer-identification
+        " "
+        mode-line-modes
+        (which-func-mode ("" which-func-format " "))
+        global-mode-string))
 
 ; Always display line number
 (setq line-number-display-limit nil)
