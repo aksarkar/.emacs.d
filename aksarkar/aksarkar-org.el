@@ -3,11 +3,22 @@
 (require 'org-bibtex)
 (require 'org-latex)
 
+; External programs
 (setq org-file-apps
       '((auto-mode . emacs)
         ("\\.pdf\\'" . "mupdf %s")
-        ("\\.eps\\'" . "evince %s"))
-      org-latex-default-packages-alist
+        ("\\.eps\\'" . "evince %s")))
+
+; New link types
+(org-add-link-type "pmid" 'aksarkar-org-pmid-open)
+(defun aksarkar-org-pmid-open (path)
+  (browse-url (concat "https://www.ncbi.nlm.nih.gov/pubmed/" path)))
+(org-add-link-type "arxiv" 'aksarkar-org-arxiv-open)
+(defun aksarkar-org-arvix-open (path)
+  (browse-url (concat ("http://arxiv.org/abs/" path))))
+
+; Latex export
+(setq org-latex-default-packages-alist
       '(("" "graphicx" t)
         ("" "longtable" nil)
         ("" "float" nil)
@@ -31,7 +42,10 @@
 \\usepackage{unicode-math}
 \\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
 \\setmainfont{Charis SIL}
-\\setmathfont[Alternate=1]{Asana Math}"
+\\setmathfont[Alternate=1]{Asana Math}
+\\usepackage{graphicx}
+\\usepackage[style=authoryear]{biblatex}
+ [NO-DEFAULT-PACKAGES]"
    ("\\section{%s}" . "\\section*{%s}")))
 
 (add-to-list 'org-latex-classes
@@ -79,26 +93,16 @@
     (replace-regexp-in-string "\\`\\\\[A-Za-z0-9]+" "\\\\textbf" contents)))
 (add-to-list 'org-export-filter-bold-functions 'aksarkar-beamer-bold)
 
-(setq org-latex-pdf-process '("latexmk -silent -xelatex %f"))
+(setq org-latex-table-scientific-notation "%s\\times 10^{%s}"
+      org-latex-pdf-process '("latexmk -silent -xelatex %f"))
 
 (setq org-bibtex-export-arbitrary-fields t
       org-bibtex-prefix "BIB_")
-
-(org-add-link-type "pmid" 'aksarkar-org-pmid-open)
-(defun aksarkar-org-pmid-open (path)
-  (browse-url (concat "https://www.ncbi.nlm.nih.gov/pubmed/" path)))
-(org-add-link-type "arxiv" 'aksarkar-org-arxiv-open)
-(defun aksarkar-org-arvix-open (path)
-  (browse-url (concat ("http://arxiv.org/abs/" path))))
 
 (defun aksarkar-org-hook ()
   (bibtex-set-dialect 'BibTeX)
   (auto-fill-mode t))
 
 (add-hook 'org-mode-hook 'aksarkar-org-hook)
-
-(define-key org-mode-map (kbd "H-e") 'org-export-dispatch)
-(define-key org-mode-map (kbd "H-r") 'org-bibtex-read-file)
-(define-key org-mode-map (kbd "H-w") 'org-bibtex-write)
 
 (provide 'aksarkar-org)
