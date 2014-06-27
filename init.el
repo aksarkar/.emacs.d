@@ -8,7 +8,6 @@
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
-(require 'aksarkar-eshell)
 (require 'aksarkar-ess)
 (require 'aksarkar-git)
 (require 'aksarkar-gui)
