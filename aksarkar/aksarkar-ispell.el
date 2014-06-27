@@ -1,5 +1,4 @@
-(setq ispell-personal-dictionary "~/.hunspell_en_US")
-(setq ispell-program-name "hunspell")
+(setq ispell-program-name "aspell")
 (defadvice ispell-get-coding-system (after ispell-always-pick-utf8 activate)
   (setq ad-return-value 'utf-8))
 
