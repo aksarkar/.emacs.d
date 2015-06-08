@@ -90,8 +90,11 @@
 ; Don't automatically page up/down when scrolling
 (setq scroll-preserve-screen-position t)
 
-; Enable incremental completion
-(icomplete-mode 1)
+; Insert pairs automatically
+(electric-pair-mode t)
+
+; Deal with sentences properly
+(setq sentence-end-double-space nil)
 
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
