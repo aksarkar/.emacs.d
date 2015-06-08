@@ -1,7 +1,6 @@
 (require 'ox-beamer)
 (require 'ox-latex)
 (require 'org-bibtex)
-(require 'org-latex)
 
 ; External programs
 (setq org-file-apps
@@ -54,8 +53,10 @@
 \\usepackage[letterpaper]{geometry}
  [DEFAULT-PACKAGES]
 \\defaultfontfeatures{Mapping=tex-text}
+\\usepackage[backend=biber]{biblatex}
 \\setmainfont{Palatino Linotype}
-\\setmathfont{Asana Math}"
+\\setmathfont{Asana Math}
+\\setmonofont{Inconsolata}"
    ("\\section{%s}" . "\\section*{%s}")
    ("\\subsection{%s}" . "\\subsection*{%s}")))
 
