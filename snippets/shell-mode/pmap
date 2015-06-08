@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: pmap
+# key: pmap
+# binding: direct-keybinding
+# --
+JOBLIST=${joblist} bsub -o log -J "${name}[1-${n}]" <~/code/util/pmap.sh

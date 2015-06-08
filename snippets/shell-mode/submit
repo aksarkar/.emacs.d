@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: submit
+# key: submit
+# binding: direct-keybinding
+# --
+bsub -o log -J ${1:$(car (s-split " " yas-text))} -R "rusage[]" "${1:command}"

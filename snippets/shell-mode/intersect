@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: intersect
+# key: intersect
+# binding: direct-keybinding
+# --
+bedtools intersect ${-sorted} ${-nobuf} -a ${stdin} -b ${bedfile}

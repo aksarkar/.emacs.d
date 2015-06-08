@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: map
+# key: map
+# binding: direct-keybinding
+# --
+m ${name} ${joblist} -R "rusage[mem=${:1},argon_io=1]"

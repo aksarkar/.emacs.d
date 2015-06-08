@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: redo
+# key: redo
+# binding: direct-keybinding
+# --
+bash ~/code/util/redo.sh ${log} ${joblist} >${redo}

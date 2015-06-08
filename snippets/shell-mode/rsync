@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: rsync
+# key: rsync
+# binding: direct-keybinding
+# --
+rsync -FFau ${source} ${destination}
