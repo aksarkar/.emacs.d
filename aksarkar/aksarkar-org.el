@@ -2,7 +2,14 @@
 (require 'ox-latex)
 (require 'org-bibtex)
 (require 'org-latex)
+(require 'org-install)
 
+; Set up languages for evaluation
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (python . t)
+   (sh . t)))
 ; External programs
 (setq org-file-apps
       '((auto-mode . emacs)
