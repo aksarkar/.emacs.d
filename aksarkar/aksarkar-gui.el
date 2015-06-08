@@ -77,22 +77,16 @@
 ; Don't automatically page up/down when scrolling
 (setq scroll-preserve-screen-position t)
 
-; Enable incremental completion
-(icomplete-mode 1)
-
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
-<<<<<<< HEAD
 ; Scroll compilation mode
 (setq compilation-scroll-output 'first-error)
 
 (defun kill-this-buffer ()
   (interactive)
   (kill-buffer (current-buffer)))
-=======
 ; Suppress useless warnings
 (setq warning-suppress-types '((alloc)))
->>>>>>> Add ESS tweaks
 
 (provide 'aksarkar-gui)

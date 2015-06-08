@@ -1,11 +1,10 @@
-(iswitchb-mode t)
 (setq ibuffer-default-sorting-mode 'alphabetic)
 (setq ibuffer-display-summary nil)
 (setq ibuffer-expert t)
 (setq ibuffer-saved-filter-groups
       (quote (("default"
                ("irc" (mode . rcirc-mode))
-               ("magit" (derived-mode . magit-mode))
+               ("magit" (name . "magit"))
                ("shell" (or (mode . eshell-mode)
                             (mode . shell-mode)))
                ("emacs" (name . "^\\*.*\\*$"))))))
