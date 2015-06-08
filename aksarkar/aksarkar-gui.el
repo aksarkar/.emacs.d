@@ -2,16 +2,19 @@
 (add-to-list 'custom-theme-load-path 
 	     "~/.emacs.d/vendor/solarized")
 (setq solarized-diff-mode 'low)
+(load-theme 'solarized-dark t)
 (load-theme 'solarized-light t)
 
 (defun aksarkar-night ()
   (interactive)
-  (load-theme 'solarized-dark t)
+  (enable-theme 'solarized-dark)
+  (disable-theme 'solarized-light)
   (set-frame-font "Consolas-12" nil t))
 
 (defun aksarkar-day ()
   (interactive)
-  (load-theme 'solarized-light t)
+  (enable-theme 'solarized-light)
+  (disable-theme 'solarized-dark)
   (set-frame-font "Consolas-8.5" nil t))
 
 ; Get around UNIX selection nonsense
@@ -65,7 +68,6 @@
 (setq display-time-day-and-date nil)
 (line-number-mode 1)
 (column-number-mode 1)
-(which-function-mode 1)
 (setq-default mode-line-format
       '((line-number-mode " L%l ")
         (column-number-mode "C%c ")
@@ -74,7 +76,6 @@
         mode-line-buffer-identification
         " "
         mode-line-modes
-        (which-func-mode ("" which-func-format " "))
         global-mode-string))
 
 ; Always display line number
