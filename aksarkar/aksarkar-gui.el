@@ -86,6 +86,7 @@
 (defun kill-this-buffer ()
   (interactive)
   (kill-buffer (current-buffer)))
+
 ; Suppress useless warnings
 (setq warning-suppress-types '((alloc)))
 
