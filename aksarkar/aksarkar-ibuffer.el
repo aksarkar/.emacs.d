@@ -1,15 +1,14 @@
-(iswitchb-mode t)
-(setq ibuffer-default-sorting-mode 'alphabetic)
-(setq ibuffer-display-summary nil)
-(setq ibuffer-expert t)
-(setq ibuffer-saved-filter-groups
+(setq ibuffer-default-sorting-mode 'alphabetic
+      ibuffer-display-summary nil
+      ibuffer-expert t
+      ibuffer-saved-filter-groups
       (quote (("default"
                ("irc" (mode . rcirc-mode))
                ("magit" (derived-mode . magit-mode))
                ("shell" (or (mode . eshell-mode)
                             (mode . shell-mode)))
-               ("emacs" (name . "^\\*.*\\*$"))))))
-(setq ibuffer-show-empty-filter-groups nil)
+               ("emacs" (name . "^\\*.*\\*$")))))
+      ibuffer-show-empty-filter-groups nil)
 
 (defun aksarkar-ibuffer-hook ()
   (ibuffer-switch-to-saved-filter-groups "default"))
