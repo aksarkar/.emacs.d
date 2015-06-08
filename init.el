@@ -11,6 +11,7 @@
 (require 'aksarkar-ess)
 (require 'aksarkar-git)
 (require 'aksarkar-gui)
+(require 'aksarkar-helm)
 (require 'aksarkar-ibuffer)
 (require 'aksarkar-ispell)
 (require 'aksarkar-keyboard)
