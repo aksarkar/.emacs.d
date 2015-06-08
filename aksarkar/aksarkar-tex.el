@@ -8,6 +8,7 @@
 
 (setq bibtex-dialect 'BibTeX
       reftex-default-bibliography "~/research/mit/reading/reading.bib"
+      sentence-end-double-space nil
       tex-fontify-script nil)
 
 (add-hook 'tex-mode-hook 'aksarkar-tex-hook)
