@@ -13,8 +13,8 @@
 (defun aksarkar-org-pmid-open (path)
   (browse-url (concat "https://www.ncbi.nlm.nih.gov/pubmed/" path)))
 (org-add-link-type "arxiv" 'aksarkar-org-arxiv-open)
-(defun aksarkar-org-arvix-open (path)
-  (browse-url (concat ("http://arxiv.org/abs/" path))))
+(defun aksarkar-org-arxiv-open (path)
+  (browse-url (concat "http://arxiv.org/abs/" path)))
 
 ; Latex export
 (setq org-latex-default-packages-alist
