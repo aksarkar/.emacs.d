@@ -100,6 +100,11 @@
 (setq org-bibtex-export-arbitrary-fields t
       org-bibtex-prefix "BIB_")
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp t)
+   (python . t)))
+
 (defun aksarkar-org-hook ()
   (bibtex-set-dialect 'BibTeX)
   (auto-fill-mode t))
