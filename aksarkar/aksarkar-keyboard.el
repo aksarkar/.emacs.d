@@ -27,10 +27,8 @@
 (global-set-key "\M-z" 'zap-up-to-char)
 (global-set-key (kbd "C-M-`") '(lambda () (interactive) (exchange-point-and-mark t)))
 (global-set-key (kbd "C-`") '(lambda () (interactive) (push-mark)))
-(global-set-key (kbd "H-b") 'bibtex-convert-alien)
 (global-set-key (kbd "H-d") 'aksarkar-day)
 (global-set-key (kbd "H-e") 'eshell)
-(global-set-key (kbd "H-f") 'find-file-at-point)
 (global-set-key (kbd "H-i") 'irc)
 (global-set-key (kbd "H-m") 'magit-status)
 (global-set-key (kbd "H-n") 'aksarkar-night)
@@ -42,6 +40,7 @@
 (global-set-key (kbd "H-w") 'next-buffer)
 (global-set-key (kbd "H-x") 'org-bibtex-read)
 (global-set-key (kbd "M-`") '(lambda () (interactive) (set-mark-command t)))
+(global-set-key (kbd "<f6>") 'mu4e)
 
 (define-key shr-map "x" 'aksarkar-shr-shell-command)
 (provide 'aksarkar-keyboard)
