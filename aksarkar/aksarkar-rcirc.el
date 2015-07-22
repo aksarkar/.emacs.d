@@ -102,4 +102,17 @@
 
 (add-hook 'rcirc-mode-hook 'er/add-rcirc-mode-expansions)
 
+(defvar rcirc-browse-url-history nil)
+(defadvice rcirc-browse-url (around fix-history activate)
+  (let* ((point       (point))
+         (filtered    (rcirc-condition-filter
+                       (lambda (x) (>= point (cdr x)))
+                       rcirc-urls))
+         (completions (mapcar 'car filtered))
+         (default     (caar filtered)))
+    (browse-url (completing-read "rcirc browse-url: "
+                                 completions nil nil nil
+                                 'rcirc-browse-url-history default)
+                arg)))
+
 (provide 'aksarkar-rcirc)
