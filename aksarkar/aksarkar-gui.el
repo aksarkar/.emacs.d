@@ -68,6 +68,7 @@
 (setq display-time-day-and-date nil)
 (line-number-mode 1)
 (column-number-mode 1)
+(setq battery-mode-line-format " (%p%%) ")
 (setq-default mode-line-format
       '((line-number-mode " L%l ")
         (column-number-mode "C%c ")
