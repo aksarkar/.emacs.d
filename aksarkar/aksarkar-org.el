@@ -26,68 +26,34 @@
         ("" "unicode-math")
         ("" "biblatex" nil)
         ("xetex" "hyperref" nil)
-        ("" "rotating" t)))
+        ("" "rotating" t))
 
-(add-to-list 'org-latex-classes
-             '("aksarkar-beamer"
-"\\documentclass{beamer}
-\\mode<presentation>
-\\usecolortheme[named=black]{structure}
-\\usefonttheme{serif}
-\\useinnertheme{rectangles}
-\\setbeamertemplate{navigation symbols}{}
-\\setbeamertemplate{footline}[]
-\\usepackage{fontspec}
-\\usepackage{unicode-math}
-\\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
-\\setmainfont{Charis SIL}
-\\setmathfont[Alternate=1]{Asana Math}
-\\usepackage{graphicx}
-\\usepackage[style=authoryear]{biblatex}
- [NO-DEFAULT-PACKAGES]"
-   ("\\section{%s}" . "\\section*{%s}")))
-
-(add-to-list 'org-latex-classes
-             '("aksarkar-article"
-"\\documentclass{article}
-\\usepackage[letterpaper]{geometry}
- [DEFAULT-PACKAGES]
-\\defaultfontfeatures{Mapping=tex-text}
-\\usepackage[backend=biber]{biblatex}
-\\setmainfont{Palatino Linotype}
-\\setmathfont{Asana Math}
-\\setmonofont{Inconsolata}"
+      org-latex-classes '(("article" "\\documentclass[11pt]{article}"
+  ("\\section{%s}" . "\\section*{%s}")
+  ("\\subsection{%s}" . "\\subsection*{%s}")
+  ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+  ("\\paragraph{%s}" . "\\paragraph*{%s}")
+  ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+ ("report" "\\documentclass[11pt]{report}"
+  ("\\part{%s}" . "\\part*{%s}")
+  ("\\chapter{%s}" . "\\chapter*{%s}")
+  ("\\section{%s}" . "\\section*{%s}")
+  ("\\subsection{%s}" . "\\subsection*{%s}")
+  ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+ ("book" "\\documentclass[11pt]{book}"
+  ("\\part{%s}" . "\\part*{%s}")
+  ("\\chapter{%s}" . "\\chapter*{%s}")
+  ("\\section{%s}" . "\\section*{%s}")
+  ("\\subsection{%s}" . "\\subsection*{%s}")
+  ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+ ("aksarkar-beamer" "\\documentclass{beamer}\n\\mode<presentation>\n\\usecolortheme[named=black]{structure}\n\\usefonttheme{serif}\n\\useinnertheme{rectangles}\n\\setbeamertemplate{navigation symbols}{}\n\\setbeamertemplate{footline}[]\n\\usepackage{amsmath}\n\\usepackage{fontspec}\n\\usepackage{unicode-math}\n\\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}\n\\setmainfont{Charis SIL}\n\\setmathfont[Alternate=1]{Asana Math}\n\\usepackage{graphicx}\n\\usepackage[backend=biber,style=authoryear]{biblatex}\n[NO-DEFAULT-PACKAGES]"
+  ("\\section{%s}" . "\\section*{%s}"))
+ ("aksarkar-article" "\\documentclass{article}\n\\usepackage[letterpaper]{geometry}\n[DEFAULT-PACKAGES]\n\\defaultfontfeatures{Mapping=tex-text}\n\\setmainfont{Palatino Linotype}\n\\setmathfont{Asana Math}\n\\setmonofont{Inconsolata}"
+  ("\\section{%s}" . "\\section*{%s}")
+  ("\\subsection{%s}" . "\\subsection*{%s}"))
+ ("aksarkar-nature" "\\documentclass{article}\n[NO-DEFAULT-PACKAGES]\n\\usepackage{amsmath}\n\\usepackage[margin=1in,letterpaper]{geometry}\n\n\\usepackage[backend=biber,date=year,defernumbers=true,doi=false,isbn=false,style=nature,url=false]{biblatex}\n\\usepackage[xetex]{hyperref}\n\\usepackage{fontspec}\n\\usepackage{parskip}\n\\usepackage{xunicode}\n\\usepackage{unicode-math}\n\\setmainfont{Palatino Linotype}\n\\setmathfont{Asana Math}\n\\setmonofont[Scale=.8]{DejaVu Sans Mono}\n\\renewcommand{\\baselinestretch}{1.1}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}"
    ("\\section{%s}" . "\\section*{%s}")
-   ("\\subsection{%s}" . "\\subsection*{%s}")))
-
-(add-to-list 'org-latex-classes
-             '("aksarkar-nature"
-"\\documentclass{article}
- [NO-DEFAULT-PACKAGES]
-\\usepackage{amsmath}
-\\usepackage[letterpaper]{geometry}
-\\usepackage{graphicx}
-\\usepackage{longtable}
-\\usepackage{float}
-\\usepackage{fontspec}
-\\usepackage{xunicode}
-\\usepackage{unicode-math}
-\\usepackage[style=nature]{biblatex}
-\\usepackage[xetex]{hyperref}
-\\usepackage{rotating}
-
-\\defaultfontfeatures{Mapping=tex-text}
-\\setmainfont{Palatino Linotype}
-\\setmathfont{Asana Math}
-\\setmonofont{Consolas}
-
-\\setlength{\\parindent}{0pt}
-\\setlength{\\parskip}{1em}
-\\renewcommand{\\baselinestretch}{1.2}
-
-\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}"
-   ("\\section{%s}" . "\\section*{%s}")
-   ("\\subsection{%s}" . "\\subsection*{%s}")))
+   ("\\subsection{%s}" . "\\subsection*{%s}"))))
 
 (defun aksarkar-beamer-bold (contents backend info)
   (when (eq backend 'beamer)
