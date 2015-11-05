@@ -2,11 +2,6 @@
 (require 'mu4e)
 (require 'smtpmail)
 
-(defun aksarkar-mu4e-view-mode-hook ()
-  (longlines-mode))
-
-(add-hook 'mu4e-view-mode-hook 'aksarkar-mu4e-view-mode-hook)
-
 (defun aksarkar-mu4e-compose-mode-hook ()
   (flyspell-mode)
   (set-fill-column 72))

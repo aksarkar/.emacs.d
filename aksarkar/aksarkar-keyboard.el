@@ -1,4 +1,3 @@
-(require 'ace-jump-mode)
 (require 'expand-region)
 (require 'misc)
 (require 'shell)
