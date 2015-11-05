@@ -7,14 +7,14 @@
 
 (defun aksarkar-night ()
   (interactive)
-  (enable-theme 'solarized-dark)
   (disable-theme 'solarized-light)
+  (load-theme 'solarized-dark t)
   (set-frame-font "Consolas-12" nil t))
 
 (defun aksarkar-day ()
   (interactive)
-  (enable-theme 'solarized-light)
   (disable-theme 'solarized-dark)
+  (load-theme 'solarized-light t)
   (set-frame-font "Consolas-8.5" nil t))
 
 ; Get around UNIX selection nonsense
