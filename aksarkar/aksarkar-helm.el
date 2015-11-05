@@ -8,7 +8,7 @@
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "H-/") 'helm-semantic-or-imenu)
 (global-set-key (kbd "H-f") 'helm-locate-library)
-(global-set-key (kbd "H-b") 'helm-bibtex)
+(global-set-key (kbd "<f7>") 'helm-bibtex)
 (global-set-key (kbd "<f5>") 'helm-imenu)
 (global-set-key (kbd "M-`") 'helm-mark-ring)
 (global-set-key (kbd "M-x") 'helm-M-x)
@@ -25,6 +25,10 @@
  helm-lisp-fuzzy-completion t
  helm-locate-fuzzy-match t
  helm-recentf-fuzzy-match t
+ helm-bibtex-format-citation-functions '((org-mode . helm-bibtex-format-citation-cite)
+                                         (latex-mode . helm-bibtex-format-citation-cite)
+                                         (markdown-mode . helm-bibtex-format-citation-pandoc-citeproc)
+                                         (default . helm-bibtex-format-citation-default))
  helm-bibtex-pdf-symbol "p"
  helm-bibtex-pdf-open-function 'helm-open-file-with-default-tool
  helm-bibtex-bibliography '("~/research/mit/reading/reading.bib")
