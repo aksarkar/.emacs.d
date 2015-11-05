@@ -109,4 +109,6 @@
   (interactive)
   (kill-buffer (current-buffer)))
 
+(setq doc-view-resolution 300)
+
 (provide 'aksarkar-gui)
