@@ -65,9 +65,11 @@
 (blink-cursor-mode 0)
 
 ; Modeline
-(setq display-time-day-and-date nil)
+(setq display-time-day-and-date t)
 (line-number-mode 1)
 (column-number-mode 1)
+(display-time-mode 1)
+(display-battery-mode 1)
 (setq battery-mode-line-format " (%p%%) ")
 (setq-default mode-line-format
       '((line-number-mode " L%l ")
