@@ -38,8 +38,9 @@
 (global-set-key (kbd "H-v") 'org-bibtex-write)
 (global-set-key (kbd "H-w") 'next-buffer)
 (global-set-key (kbd "H-x") 'org-bibtex-read)
-(global-set-key (kbd "M-`") '(lambda () (interactive) (set-mark-command t)))
+(global-set-key (kbd "M-`") 'helm-mark-ring)
 (global-set-key (kbd "<f6>") 'mu4e)
+(global-set-key (kbd "<f8>") 'org-capture)
 
 (define-key shr-map "x" 'aksarkar-shr-shell-command)
 (provide 'aksarkar-keyboard)
