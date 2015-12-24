@@ -109,6 +109,6 @@
   (interactive)
   (kill-buffer (current-buffer)))
 
-(setq doc-view-resolution 300)
+(pdf-tools-install)
 
 (provide 'aksarkar-gui)
