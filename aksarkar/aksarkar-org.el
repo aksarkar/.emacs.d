@@ -56,6 +56,10 @@
    ("\\section{%s}" . "\\section*{%s}")
    ("\\subsection{%s}" . "\\subsection*{%s}"))))
 
+(setq org-capture-templates
+      '(("n" "Lab notebook" entry (file+datetree "~/research/mit/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep t)
+        ("p" "Paper" entry (file+datetree "~/research/mit/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep nil :clock-resume t)))
+
 (defun aksarkar-beamer-bold (contents backend info)
   (when (eq backend 'beamer)
     (replace-regexp-in-string "\\`\\\\[A-Za-z0-9]+" "\\\\textbf" contents)))
