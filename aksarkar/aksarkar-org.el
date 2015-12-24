@@ -18,17 +18,18 @@
 
 ; Latex export
 (setq org-latex-default-packages-alist
-      '(("" "graphicx" t)
+      '(("" "amsmath" nil)
+        ("" "graphicx" t)
         ("" "longtable" nil)
         ("" "float" nil)
         ("" "fontspec" t)
         ("" "xunicode" t)
         ("" "unicode-math")
-        ("" "biblatex" nil)
+        ("backend=biber,date=year,doi=false,isbn=false,style=nature,url=false" "biblatex" nil)
         ("xetex" "hyperref" nil)
         ("" "rotating" t))
 
-      org-latex-classes '(("article" "\\documentclass[11pt]{article}"
+      org-latex-classes '(("article" "\\documentclass[11pt]{article}\n[DEFAULT-PACKAGES]\n\\usepackage{parskip}\n\\usepackage[letterpaper]{geometry}"
   ("\\section{%s}" . "\\section*{%s}")
   ("\\subsection{%s}" . "\\subsection*{%s}")
   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
