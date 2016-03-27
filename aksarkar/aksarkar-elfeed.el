@@ -4,7 +4,6 @@
       '(
         "http://33bits.org/feed/"
         "http://al3x.net/atom.xml"
-        "http://alltom.com/feed.atom"
         "http://andrewgelman.com/feed/"
         "http://apenwarr.ca/log/rss.php"
         "http://blog.computationalcomplexity.org/feeds/posts/default"
@@ -29,6 +28,7 @@
         "http://www.megatokyo.com/rss/megatokyo.xml"
         "http://www.randomprogramming.com/feed/"
         "http://www.scottaaronson.com/blog/?feed=rss2"
+        "http://zmagg.tumblr.com/rss"
         "https://compmeta.wordpress.com/feed/"
         "https://donsbot.wordpress.com/feed/"
         "https://errorstatistics.wordpress.com/feed/"
