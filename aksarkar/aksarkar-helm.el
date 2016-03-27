@@ -3,16 +3,16 @@
 
 (helm-mode 1)
 
+(global-set-key (kbd "<f5>") 'helm-semantic-or-imenu)
+(global-set-key (kbd "<f6>") 'helm-man-woman)
+(global-set-key (kbd "<f7>") 'helm-bibtex)
 (global-set-key (kbd "C-M-i") 'ac-complete-with-helm)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "H-/") 'helm-semantic-or-imenu)
-(global-set-key (kbd "H-f") 'helm-locate-library)
-(global-set-key (kbd "<f7>") 'helm-bibtex)
-(global-set-key (kbd "<f5>") 'helm-imenu)
 (global-set-key (kbd "M-`") 'helm-mark-ring)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+
 (define-key comint-mode-map (kbd "M-r") 'helm-comint-input-ring)
 (define-key lisp-mode-map (kbd "C-M-i") 'helm-lisp-completion-at-point)
 
