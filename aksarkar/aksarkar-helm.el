@@ -30,7 +30,7 @@
                                          (markdown-mode . helm-bibtex-format-citation-pandoc-citeproc)
                                          (default . helm-bibtex-format-citation-default))
  helm-bibtex-pdf-symbol "p"
- helm-bibtex-pdf-open-function 'helm-open-file-with-default-tool
+ helm-bibtex-pdf-open-function 'find-file
  helm-bibtex-bibliography '("~/research/mit/reading/reading.bib")
  helm-bibtex-library-path '("~/research/mit/reading" "~/misc/books/")
  helm-bibtex-fallback-options
