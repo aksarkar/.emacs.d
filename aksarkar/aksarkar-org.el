@@ -24,37 +24,31 @@
         ("" "float" nil)
         ("" "fontspec" t)
         ("" "xunicode" t)
-        ("" "unicode-math")
-        ("backend=biber,date=year,doi=false,isbn=false,style=nature,url=false" "biblatex" nil)
+        ("backend=biber,date=year,defernumbers=true,doi=false,isbn=false,style=nature,url=false" "biblatex" nil)
+        ("" "tikz" t)
         ("xetex" "hyperref" nil)
         ("" "rotating" t))
-
-      org-latex-classes '(("article" "\\documentclass[11pt]{article}\n[DEFAULT-PACKAGES]\n\\usepackage{parskip}\n\\usepackage[letterpaper]{geometry}"
+      org-latex-classes '(("article" "\\documentclass{article}\n[DEFAULT-PACKAGES]\n\\usepackage{parskip}\n\\usepackage[letterpaper]{geometry}\n\\renewcommand\\cite{\\supercite}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}"
   ("\\section{%s}" . "\\section*{%s}")
   ("\\subsection{%s}" . "\\subsection*{%s}")
   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
   ("\\paragraph{%s}" . "\\paragraph*{%s}")
   ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
- ("report" "\\documentclass[11pt]{report}"
+ ("report" "\\documentclass{report}\n[DEFAULT-PACKAGES]\n\\usepackage{parskip}\n\\usepackage[letterpaper]{geometry}\n\\renewcommand\\cite{\\supercite}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}"
   ("\\part{%s}" . "\\part*{%s}")
   ("\\chapter{%s}" . "\\chapter*{%s}")
   ("\\section{%s}" . "\\section*{%s}")
   ("\\subsection{%s}" . "\\subsection*{%s}")
   ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
- ("book" "\\documentclass[11pt]{book}"
+ ("book" "\\documentclass{book}"
   ("\\part{%s}" . "\\part*{%s}")
   ("\\chapter{%s}" . "\\chapter*{%s}")
   ("\\section{%s}" . "\\section*{%s}")
   ("\\subsection{%s}" . "\\subsection*{%s}")
   ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
- ("aksarkar-beamer" "\\documentclass{beamer}\n\\mode<presentation>\n\\usecolortheme[named=black]{structure}\n\\usefonttheme{serif}\n\\useinnertheme{rectangles}\n\\setbeamertemplate{navigation symbols}{}\n\\setbeamertemplate{footline}[]\n\\usepackage{amsmath}\n\\usepackage{fontspec}\n\\usepackage{unicode-math}\n\\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}\n\\setmainfont{Charis SIL}\n\\setmathfont[Alternate=1]{Asana Math}\n\\usepackage{graphicx}\n\\usepackage[backend=biber,style=authoryear]{biblatex}\n[NO-DEFAULT-PACKAGES]"
-  ("\\section{%s}" . "\\section*{%s}"))
- ("aksarkar-article" "\\documentclass{article}\n\\usepackage[letterpaper]{geometry}\n[DEFAULT-PACKAGES]\n\\defaultfontfeatures{Mapping=tex-text}\n\\setmainfont{Palatino Linotype}\n\\setmathfont{Asana Math}\n\\setmonofont{Inconsolata}"
-  ("\\section{%s}" . "\\section*{%s}")
-  ("\\subsection{%s}" . "\\subsection*{%s}"))
- ("aksarkar-nature" "\\documentclass{article}\n[NO-DEFAULT-PACKAGES]\n\\usepackage{amsmath}\n\\usepackage[margin=1in,letterpaper]{geometry}\n\n\\usepackage[backend=biber,date=year,defernumbers=true,doi=false,isbn=false,style=nature,url=false]{biblatex}\n\\usepackage[xetex]{hyperref}\n\\usepackage{fontspec}\n\\usepackage{parskip}\n\\usepackage{xunicode}\n\\usepackage{unicode-math}\n\\setmainfont{Palatino Linotype}\n\\setmathfont{Asana Math}\n\\setmonofont[Scale=.8]{DejaVu Sans Mono}\n\\renewcommand{\\baselinestretch}{1.1}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}"
-   ("\\section{%s}" . "\\section*{%s}")
-   ("\\subsection{%s}" . "\\subsection*{%s}"))))
+ ("aksarkar-beamer" "\\documentclass[aspectratio=1610,hyperref={}]{beamer}\n\\mode<presentation>\n\\usefonttheme[onlymath]{serif}\n\\usecolortheme[named=black]{structure}\n\\useinnertheme{rectangles}\n\\setbeamertemplate{navigation symbols}{}\n\\setbeamertemplate{footline}[]\n[NO-DEFAULT-PACKAGES]\n\\usepackage{fontspec}\n\\usepackage{xunicode}\n\\usepackage[backend=biber,date=year,doi=false,isbn=false,style=nature,url=false]{biblatex}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}"
+  ("\\section{%s}" . "\\section*{%s}")))
+      org-export-dispatch-use-expert-ui t)
 
 (setq org-capture-templates
       '(("n" "Lab notebook" entry (file+datetree "~/research/mit/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep t)
