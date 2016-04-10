@@ -53,7 +53,13 @@
 
 (setq org-capture-templates
       '(("n" "Lab notebook" entry (file+datetree "~/research/mit/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep t)
-        ("p" "Paper" entry (file+datetree "~/research/mit/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep nil :clock-resume t)))
+        ("p" "Paper" entry (file+datetree "~/research/mit/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep nil :clock-resume t)
+        ("d" "Debit" plain (file "~/misc/account.txt") "%(org-read-date) %^{payee}
+    expenses:%^{account}  %^{amount}
+    assets:checking")
+        ("c" "Credit" plain (file "~/misc/account.txt") "%(org-read-date) %^{payee}
+    expenses:%^{account}  %^{amount}
+    liabilities:visa")))
 
 (defun aksarkar-beamer-bold (contents backend info)
   (when (eq backend 'beamer)
