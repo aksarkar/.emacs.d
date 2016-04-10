@@ -9,6 +9,7 @@
 (add-hook 'mu4e-compose-mode-hook 'aksarkar-mu4e-compose-mode-hook)
 
 (setq
+ message-auto-save-directory "~/mail/drafts/"
  message-send-mail-function 'smtpmail-send-it
  smtpmail-smtp-server "smtp.mit.edu"
  message-signature "Abhishek Sarkar"
