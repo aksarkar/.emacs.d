@@ -17,6 +17,7 @@
         "http://evincarofautumn.blogspot.com/feeds/posts/default"
         "http://feeds.feedburner.com/LettersOfNote"
         "http://feeds.feedburner.com/vivekhaldar"
+        "http://jvns.ca/atom.xml"
         "http://lambda-the-ultimate.org/rss.xml"
         "http://matt.might.net/articles/feed.rss"
         "http://neopythonic.blogspot.com/feeds/posts/default"
