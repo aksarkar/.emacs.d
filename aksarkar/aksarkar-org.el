@@ -23,6 +23,7 @@
         ("" "longtable" nil)
         ("" "float" nil)
         ("" "fontspec" t)
+        ("" "unicode-math" t)
         ("" "xunicode" t)
         ("backend=biber,date=year,defernumbers=true,doi=false,isbn=false,style=nature,url=false" "biblatex" nil)
         ("" "tikz" t)
