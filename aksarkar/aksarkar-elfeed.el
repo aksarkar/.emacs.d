@@ -8,6 +8,7 @@
         "http://apenwarr.ca/log/rss.php"
         "http://blog.computationalcomplexity.org/feeds/posts/default"
         "http://blog.cryptographyengineering.com/feeds/posts/default"
+        "http://blog.shakirm.com/feed/"
         "http://carlos.bueno.org/atom.xml"
         "http://commandcenter.blogspot.com/feeds/posts/default"
         "http://connect.biorxiv.org/biorxiv_xml.php?subject=genetics+genomics"
