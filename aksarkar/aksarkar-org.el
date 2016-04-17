@@ -29,7 +29,7 @@
         ("" "tikz" t)
         ("xetex" "hyperref" nil)
         ("" "rotating" t))
-      org-latex-classes '(("article" "\\documentclass{article}\n[DEFAULT-PACKAGES]\n\\usepackage{parskip}\n\\usepackage[letterpaper]{geometry}\n\\renewcommand\\cite{\\supercite}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}"
+      org-latex-classes '(("article" "\\documentclass{article}\n[DEFAULT-PACKAGES]\n\\usepackage{parskip}\n\\usepackage[letterpaper]{geometry}\n\\renewcommand\\cite{\\supercite}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}\n\\setmainfont[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]{texgyrepagella}\n\\setmathfont[bold-style=TeX]{texgyrepagella-math.otf}"
   ("\\section{%s}" . "\\section*{%s}")
   ("\\subsection{%s}" . "\\subsection*{%s}")
   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
