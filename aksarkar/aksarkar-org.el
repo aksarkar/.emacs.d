@@ -59,7 +59,9 @@
     assets:checking")
         ("c" "Credit" plain (file "~/misc/account.txt") "%(org-read-date) %^{payee}
     expenses:%^{account}  %^{amount}
-    liabilities:visa")))
+    liabilities:visa"))
+      org-refile-targets '(("/home/asarkar/research/mit/notebook.org" . (:maxlevel . 3)))
+      org-refile-allow-creating-parent-nodes 'confirm)
 
 (defun aksarkar-beamer-bold (contents backend info)
   (when (eq backend 'beamer)
