@@ -3,7 +3,6 @@
 (setq elfeed-feeds
       '(
         "http://33bits.org/feed/"
-        "http://al3x.net/atom.xml"
         "http://andrewgelman.com/feed/"
         "http://apenwarr.ca/log/rss.php"
         "http://blog.computationalcomplexity.org/feeds/posts/default"
@@ -39,6 +38,7 @@
         "https://nplusonemag.com/feed/"
         "https://themonadreader.wordpress.com/feed/"
         "https://www.dissentmagazine.org/feed"
+        "https://www.youtube.com/feeds/videos.xml?channel_id=UCjFqcJQXGZ6T6sxyFB-5i6A"
         )
       elfeed-search-clipboard-type 'CLIPBOARD
       elfeed-search-filter "+unread"
