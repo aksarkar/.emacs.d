@@ -8,14 +8,12 @@
 (defun aksarkar-night ()
   (interactive)
   (disable-theme 'solarized-light)
-  (load-theme 'solarized-dark t)
-  (set-frame-font "Consolas-12" nil t))
+  (load-theme 'solarized-dark t))
 
 (defun aksarkar-day ()
   (interactive)
   (disable-theme 'solarized-dark)
-  (load-theme 'solarized-light t)
-  (set-frame-font "Consolas-8.5" nil t))
+  (load-theme 'solarized-light t))
 
 ; Get around UNIX selection nonsense
 (setq x-select-enable-clipboard t)
