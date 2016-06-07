@@ -2,4 +2,6 @@
 
 (setq ledger-reports
       '(("month" "ledger -f %(ledger-file) -p \"this month\" reg expenses liabilities")
-        ("ledger -f %(ledger-file) -p \"this month\" budget")))
+        ("budget" "ledger -f %(ledger-file) -p \"this month\" budget")))
+
+(provide 'aksarkar-ledger)
