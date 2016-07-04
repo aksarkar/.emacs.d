@@ -8,6 +8,7 @@
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
+(require 'aksarkar-avy)
 (require 'aksarkar-ess)
 (require 'aksarkar-git)
 (require 'aksarkar-gui)
@@ -16,4 +17,5 @@
 (require 'aksarkar-ispell)
 (require 'aksarkar-keyboard)
 (require 'aksarkar-python)
+(require 'aksarkar-rcirc)
 (require 'aksarkar-shell)

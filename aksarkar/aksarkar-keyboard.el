@@ -3,7 +3,7 @@
 
 (defun aksarkar-save-buffer-and-swap (arg)
   (interactive "P")
-  (unless (get-buffer-process (current-buffer)) 
+  (if (derived-mode-p 'prog-mode 'text-mode)
     (basic-save-buffer))
   (switch-to-buffer nil)
   (if (and arg
@@ -17,7 +17,7 @@
           (minibuffer-completion-predicate predicate))
       (ivy-completing-read "Completion:" collection predicate))))
 
-(global-set-key "\C-s" 'swiper)
+(global-set-key "\C-s" 'isearch-forward-regexp)
 (global-set-key "\C-x\C-b" 'ibuffer)
 (global-set-key "\C-xk" 'kill-this-buffer)
 (global-set-key "\C-z" 'undo)
