@@ -87,4 +87,6 @@
 ; Suppress useless warnings
 (setq warning-suppress-types '((alloc)))
 
+(put 'narrow-to-region 'disabled nil)
+
 (provide 'aksarkar-gui)
