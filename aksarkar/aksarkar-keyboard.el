@@ -22,7 +22,6 @@
 (global-set-key "\M-%" 'query-replace-regexp)
 (global-set-key "\M-&" 'replace-regexp)
 (global-set-key "\M-h" 'er/expand-region)
-(global-set-key "\M-m" 'ace-jump-mode)
 (global-set-key "\M-z" 'zap-up-to-char)
 (global-set-key (kbd "C-M-`") '(lambda () (interactive) (exchange-point-and-mark t)))
 (global-set-key (kbd "C-`") '(lambda () (interactive) (push-mark)))

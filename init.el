@@ -11,6 +11,7 @@
 (require 'aksarkar-browse)
 (require 'aksarkar-elfeed)
 (require 'aksarkar-eshell)
+(require 'aksarkar-avy)
 (require 'aksarkar-git)
 (require 'aksarkar-gui)
 (require 'aksarkar-haskell)
