@@ -51,7 +51,7 @@
 (setq display-time-day-and-date nil)
 (line-number-mode 1)
 (column-number-mode 1)
-(which-function-mode 1)
+(display-time-mode 1)
 (setq-default mode-line-format
       '((line-number-mode " L%l ")
         (column-number-mode "C%c ")
@@ -60,7 +60,6 @@
         mode-line-buffer-identification
         " "
         mode-line-modes
-        (which-func-mode ("" which-func-format " "))
         global-mode-string))
 
 ; Always display line number
