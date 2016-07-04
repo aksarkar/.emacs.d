@@ -1,7 +1,7 @@
 (require 'ledger-mode)
 
 (setq ledger-reports
-      '(("month" "ledger -f %(ledger-file) -p \"this month\" reg expenses liabilities")
+      '(("reg" "ledger -f %(ledger-file) reg checking payable")
         ("budget" "ledger -f %(ledger-file) -p \"this month\" budget")))
 
 (provide 'aksarkar-ledger)
