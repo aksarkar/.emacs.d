@@ -42,8 +42,6 @@
 (show-paren-mode t)
 (electric-pair-mode)
 (setq show-paren-style 'parenthesis)
-(electric-spacing-mode)
-(setq electric-spacing-double-space-docs nil)
 
 ; Disable blinking cursor
 (setq visible-cursor nil)
