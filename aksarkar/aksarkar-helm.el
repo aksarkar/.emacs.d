@@ -25,7 +25,7 @@
  helm-lisp-fuzzy-completion t
  helm-locate-fuzzy-match t
  helm-recentf-fuzzy-match t
- helm-bibtex-format-citation-functions '((org-mode . helm-bibtex-format-citation-cite)
+ bibtex-completion-format-citation-functions '((org-mode . helm-bibtex-format-citation-cite)
                                          (latex-mode . helm-bibtex-format-citation-cite)
                                          (markdown-mode . helm-bibtex-format-citation-pandoc-citeproc)
                                          (default . helm-bibtex-format-citation-default))
