@@ -34,6 +34,7 @@
         "https://donsbot.wordpress.com/feed/"
         "https://errorstatistics.wordpress.com/feed/"
         "https://existentialtype.wordpress.com/feed/"
+        "https://geneticvariance.wordpress.com/feed/"
         "https://henrytcs.wordpress.com/feed/"
         "https://nplusonemag.com/feed/"
         "https://themonadreader.wordpress.com/feed/"
