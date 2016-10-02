@@ -3,7 +3,7 @@
 
 (helm-mode 1)
 
-(global-set-key (kbd "<f5>") 'helm-semantic-or-imenu)
+(global-set-key (kbd "<f5>") 'helm-projectile)
 (global-set-key (kbd "<f6>") 'helm-man-woman)
 (global-set-key (kbd "<f7>") 'helm-bibtex)
 (global-set-key (kbd "C-M-i") 'ac-complete-with-helm)

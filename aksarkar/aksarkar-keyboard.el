@@ -40,6 +40,7 @@
 (global-set-key (kbd "M-`") 'helm-mark-ring)
 (global-set-key (kbd "<f6>") 'mu4e)
 (global-set-key (kbd "<f8>") 'org-capture)
+(global-set-key (kbd "<f9>") 'org-agenda)
 
 (define-key shr-map "x" 'aksarkar-shr-shell-command)
 (provide 'aksarkar-keyboard)
