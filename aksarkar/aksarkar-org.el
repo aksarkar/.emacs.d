@@ -29,7 +29,13 @@
         ("" "tikz" t)
         ("xetex" "hyperref" nil)
         ("" "rotating" t))
-      org-latex-classes '(("article" "\\documentclass{article}\n[DEFAULT-PACKAGES]\n\\usepackage{parskip}\n\\usepackage[letterpaper]{geometry}\n\\renewcommand\\cite{\\supercite}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}\n\\setmainfont[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]{texgyrepagella}\n\\setmathfont[bold-style=TeX]{texgyrepagella-math.otf}"
+      org-latex-classes '(("article" "\\documentclass{article}\n[DEFAULT-PACKAGES]\n\\usepackage{parskip}\n\\usepackage[letterpaper,margin=1in]{geometry}\n\\renewcommand\\cite{\\supercite}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}\n\\setmainfont[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]{texgyrepagella}\n\\setmathfont[bold-style=TeX]{texgyrepagella-math.otf}"
+  ("\\section{%s}" . "\\section*{%s}")
+  ("\\subsection{%s}" . "\\subsection*{%s}")
+  ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+  ("\\paragraph{%s}" . "\\paragraph*{%s}")
+  ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+                          ("nips" "\\documentclass{article}\n[DEFAULT-PACKAGES]\n\\usepackage[margin=1in]{geometry}\n\\renewcommand\\cite{\\supercite}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}"
   ("\\section{%s}" . "\\section*{%s}")
   ("\\subsection{%s}" . "\\subsection*{%s}")
   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
@@ -47,7 +53,7 @@
   ("\\section{%s}" . "\\section*{%s}")
   ("\\subsection{%s}" . "\\subsection*{%s}")
   ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
- ("aksarkar-beamer" "\\documentclass[aspectratio=1610,hyperref={}]{beamer}\n\\mode<presentation>\n\\usefonttheme[onlymath]{serif}\n\\usecolortheme[named=black]{structure}\n\\useinnertheme{rectangles}\n\\setbeamertemplate{navigation symbols}{}\n\\setbeamertemplate{footline}[]\n[NO-DEFAULT-PACKAGES]\n\\usepackage{fontspec}\n\\usepackage{xunicode}\n\\usepackage[backend=biber,date=year,doi=false,isbn=false,style=nature,url=false]{biblatex}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}"
+ ("aksarkar-beamer" "\\documentclass[aspectratio=1610,hyperref={},table]{beamer}\n\\mode<presentation>\n\\usefonttheme[onlymath]{serif}\n\\usecolortheme[named=black]{structure}\n\\useinnertheme{rectangles}\n\\setbeamertemplate{navigation symbols}{}\n\\setbeamertemplate{footline}[]\n[NO-DEFAULT-PACKAGES]\n\\usepackage{fontspec}\n\\usepackage{xunicode}\n\\usepackage{unicode-math}\n\n\\setmathfont[bold-style=TeX]{texgyrepagella-math.otf}\\usepackage[backend=biber,date=year,doi=false,isbn=false,style=authoryear,url=false]{biblatex}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}"
   ("\\section{%s}" . "\\section*{%s}")))
       org-export-dispatch-use-expert-ui t)
 
