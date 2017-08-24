@@ -3,7 +3,6 @@
 (setq elfeed-feeds
       '(
         "http://33bits.org/feed/"
-        "http://andrewgelman.com/feed/"
         "http://apenwarr.ca/log/rss.php"
         "http://blog.computationalcomplexity.org/feeds/posts/default"
         "http://blog.cryptographyengineering.com/feeds/posts/default"
@@ -15,13 +14,12 @@
         "http://elliotth.blogspot.com/feeds/posts/default"
         "http://ericlippert.com/feed/"
         "http://evincarofautumn.blogspot.com/feeds/posts/default"
-        "http://feeds.feedburner.com/LettersOfNote"
-        "http://feeds.feedburner.com/vivekhaldar"
         "http://jvns.ca/atom.xml"
         "http://lambda-the-ultimate.org/rss.xml"
         "http://matt.might.net/articles/feed.rss"
         "http://neopythonic.blogspot.com/feeds/posts/default"
         "http://planet.emacsen.org/atom.xml"
+        "http://pressthink.org/feed/"
         "http://prog21.dadgum.com/atom.xml"
         "http://www.archlinux.org/feeds/news/"
         "http://www.cs.uni.edu/~wallingf/blog/index.xml"
@@ -35,10 +33,12 @@
         "https://errorstatistics.wordpress.com/feed/"
         "https://existentialtype.wordpress.com/feed/"
         "https://geneticvariance.wordpress.com/feed/"
-        "https://henrytcs.wordpress.com/feed/"
         "https://nplusonemag.com/feed/"
+        "https://samzdat.com/feed/"
         "https://themonadreader.wordpress.com/feed/"
         "https://www.dissentmagazine.org/feed"
+        "https://www.youtube.com/feeds/videos.xml?channel_id=UC6EnFbK-P5q0zeaqI5yobKg"
+        "https://www.youtube.com/feeds/videos.xml?channel_id=UCgioULMzcmu7m4NVMKt98LA"
         "https://www.youtube.com/feeds/videos.xml?channel_id=UCjFqcJQXGZ6T6sxyFB-5i6A"
         )
       elfeed-search-clipboard-type 'CLIPBOARD
