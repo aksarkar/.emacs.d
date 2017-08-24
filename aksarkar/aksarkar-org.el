@@ -53,18 +53,19 @@
 (setq org-latex-caption-above nil)
 
 (setq org-capture-templates
-      '(("n" "Lab notebook" entry (file+datetree "~/research/mit/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep t)
-        ("t" "Task" entry (file "~/research/mit/todo.org") "* TODO")
-        ("i" "Interrupt" entry (file+datetree "~/research/mit/notebook.org") nil :jump-to-captured t :clock-in t :clock-resume t)
-        ("p" "Paper" entry (file+datetree "~/research/mit/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep nil :clock-resume t)
+      '(("n" "Lab notebook" entry (file+datetree "~/research/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep t)
+        ("t" "Task" entry (file "~/research/todo.org") "* TODO")
+        ("i" "Interrupt" entry (file+datetree "~/research/notebook.org") nil :jump-to-captured t :clock-in t :clock-resume t)
+        ("p" "Paper" entry (file+datetree "~/research/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep nil :clock-resume t)
         ("d" "Debit" plain (file "~/misc/account.txt") "%(org-read-date) %^{payee}
     expenses:%^{account}  %^{amount}
     assets:checking" :kill-buffer t)
         ("c" "Credit" plain (file "~/misc/account.txt") "%(org-read-date) %^{payee}
     expenses:%^{account}  %^{amount}
     liabilities:visa" :kill-buffer t))
-      org-refile-targets '(("/home/asarkar/research/mit/notebook.org" . (:maxlevel . 3))
-                           ("/home/asarkar/research/mit/todo.org" . (:maxlevel . 3)))
+      org-refile-targets '(("/home/asarkar/research/notebook.org" . (:maxlevel . 3))
+                           ("/home/asarkar/research/todo.org" . (:maxlevel . 3))
+                           ("/home/asarkar/misc/move.org"))
       org-refile-allow-creating-parent-nodes 'confirm)
 
 (defun aksarkar-beamer-bold (contents backend info)
@@ -89,6 +90,10 @@
 
 (add-hook 'org-mode-hook 'aksarkar-org-hook)
 
-(setq org-agenda-files (quote ("~/research/mit/todo.org")))
+(setq org-agenda-files '("~/research/notebook.org" "~/research/todo.org" "~/misc/move/move.org")
+      org-agenda-span 'day
+      org-todo-keywords '((sequence "TODO" "|" "DONE" "WONTFIX(w)"))
+      org-latex-table-scientific-notation "\\(%s\\times 10^{%s}\\)"
+      )
 
 (provide 'aksarkar-org)
