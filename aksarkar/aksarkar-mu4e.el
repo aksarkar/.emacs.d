@@ -11,18 +11,20 @@
 (setq
  message-auto-save-directory "~/mail/drafts/"
  message-send-mail-function 'smtpmail-send-it
- smtpmail-smtp-server "smtp.mit.edu"
+ smtpmail-smtp-server "authsmtp.uchicago.edu"
  message-signature "Abhishek Sarkar"
  mu4e-get-mail-command "mbsync -aq"
  mu4e-maildir "~/mail/"
- mu4e-my-email-addresses '("aksarkar@mit.edu"
+ mu4e-my-email-addresses '("aksarkar@uchicago.edu"
+                           "aksarkar@alum.mit.edu"
+                           "aksarkar@mit.edu"
                            "aksarkar@csail.mit.edu"
                            "asarkar@cs.unc.edu"
-                           "asarkar@email.unc.edu"
                            "asarkar@live.unc.edu"
+                           "sarkar.k.abhishek@gmail.com"
                            "pyroclasm924@gmail.com")
- mu4e-reply-to-address "aksarkar@mit.edu"
- user-mail-address "aksarkar@mit.edu"
+ mu4e-reply-to-address "aksarkar@uchicago.edu"
+ user-mail-address "aksarkar@uchicago.edu"
  user-full-name "Abhishek Sarkar")
 
 (provide 'aksarkar-mu4e)
