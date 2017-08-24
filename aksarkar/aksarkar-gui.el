@@ -18,6 +18,7 @@
 ; Get around UNIX selection nonsense
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+(setq save-interprogram-paste-before-kill t)
 
 ; Set window title
 (setq frame-title-format '(buffer-file-name "%f - Emacs" "Emacs")) 
@@ -66,7 +67,7 @@
 (setq display-time-day-and-date t)
 (line-number-mode 1)
 (column-number-mode 1)
-(display-time-mode 1)
+(display-time-mode t)
 (display-battery-mode 1)
 (setq battery-mode-line-format " (%p%%) ")
 (setq-default mode-line-format
@@ -108,5 +109,7 @@
   (kill-buffer (current-buffer)))
 
 (pdf-tools-install)
+
+(setq dired-dwim-target t)
 
 (provide 'aksarkar-gui)
