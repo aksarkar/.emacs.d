@@ -18,13 +18,14 @@
 
 ; Latex export
 (setq org-latex-default-packages-alist
-      '(("" "amsmath" nil)
+      '(
         ("" "graphicx" t)
         ("" "longtable" nil)
         ("" "float" nil)
-        ("" "fontspec" t)
-        ("" "unicode-math" t)
+        ("no-math" "fontspec" t)
         ("" "xunicode" t)
+        ("" "unicode-math" t)
+        ("" "amsmath" nil)
         ("backend=biber,date=year,defernumbers=true,doi=false,isbn=false,style=nature,url=false" "biblatex" nil)
         ("" "tikz" t)
         ("xetex" "hyperref" nil)
