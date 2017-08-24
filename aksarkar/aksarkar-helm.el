@@ -1,9 +1,11 @@
-(require 'helm-config)
 (require 'helm-bibtex)
+(require 'helm-config)
+(require 'projectile)
+(projectile-global-mode)
 
 (helm-mode 1)
 
-(global-set-key (kbd "<f5>") 'helm-projectile)
+(global-set-key (kbd "<f5>") 'projectile-command-map)
 (global-set-key (kbd "<f6>") 'helm-man-woman)
 (global-set-key (kbd "<f7>") 'helm-bibtex)
 (global-set-key (kbd "C-M-i") 'ac-complete-with-helm)
@@ -25,10 +27,10 @@
  helm-lisp-fuzzy-completion t
  helm-locate-fuzzy-match t
  helm-recentf-fuzzy-match t
- bibtex-completion-format-citation-functions '((org-mode . helm-bibtex-format-citation-cite)
-                                         (latex-mode . helm-bibtex-format-citation-cite)
-                                         (markdown-mode . helm-bibtex-format-citation-pandoc-citeproc)
-                                         (default . helm-bibtex-format-citation-default))
+ bibtex-completion-format-citation-functions '((org-mode . bibtex-completion-format-citation-cite)
+                                         (latex-mode . bibtex-completion-format-citation-cite)
+                                         (markdown-mode . bibtex-completion-format-citation-pandoc-citeproc)
+                                         (default . bibtex-completion-format-citation-default))
  helm-bibtex-pdf-symbol "p"
  helm-bibtex-pdf-open-function 'find-file
  helm-bibtex-bibliography '("~/research/mit/reading/reading.bib")
