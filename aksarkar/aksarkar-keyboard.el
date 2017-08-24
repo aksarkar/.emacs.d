@@ -14,6 +14,10 @@
           (set-process-filter proc 'comint-output-filter)
           (set-process-sentinel proc 'shell-command-sentinel))))))
 
+(dotimes (n 10)
+  (global-unset-key (kbd (format "C-%d" n)))
+  (global-unset-key (kbd (format "M-%d" n))))
+
 (global-set-key "\C-r" 'isearch-backward-regexp)
 (global-set-key "\C-s" 'isearch-forward-regexp)
 (global-set-key "\C-x\C-b" 'ibuffer)
@@ -40,7 +44,7 @@
 (global-set-key (kbd "M-`") 'helm-mark-ring)
 (global-set-key (kbd "<f6>") 'mu4e)
 (global-set-key (kbd "<f8>") 'org-capture)
-(global-set-key (kbd "<f9>") 'org-agenda)
+(global-set-key (kbd "C-1") 'org-agenda)
 
 (define-key shr-map "x" 'aksarkar-shr-shell-command)
 (provide 'aksarkar-keyboard)
