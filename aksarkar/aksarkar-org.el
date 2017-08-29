@@ -65,7 +65,7 @@
     liabilities:visa" :kill-buffer t))
       org-refile-targets '(("/home/asarkar/research/notebook.org" . (:maxlevel . 3))
                            ("/home/asarkar/research/todo.org" . (:maxlevel . 3))
-                           ("/home/asarkar/misc/move.org"))
+                           ("/home/asarkar/misc/move/move.org" . (:maxlevel . 3)))
       org-refile-allow-creating-parent-nodes 'confirm)
 
 (defun aksarkar-beamer-bold (contents backend info)
