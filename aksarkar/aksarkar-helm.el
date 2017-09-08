@@ -11,9 +11,8 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "H-f") 'helm-locate-library)
-(global-set-key (kbd "<f5>") 'projectile-command-map)
-(global-set-key (kbd "<f6>") 'helm-projects-find-files)
-(global-set-key (kbd "<f7>") 'helm-man-woman)
+(global-set-key (kbd "M-2") 'projectile-command-map)
+(global-set-key (kbd "M-3") 'helm-man-woman)
 (global-set-key (kbd "C-M-i") 'ac-complete-with-helm)
 (global-set-key (kbd "C-c i") 'helm-semantic-or-imenu)
 (define-key comint-mode-map (kbd "M-r") 'helm-comint-input-ring)
@@ -26,12 +25,7 @@
       helm-file-cache-fuzzy-match t
       helm-lisp-fuzzy-completion t
       helm-locate-fuzzy-match nil
-      helm-locate-project-list '("/broad/compbio/aksarkar/projects/frea/"
-                                 "/broad/compbio/aksarkar/projects/mediator-was/mediator_was"
-                                 "/broad/compbio/aksarkar/projects/pybslmm/"
-                                 "/broad/compbio/aksarkar/projects/roadmap/"
-                                 "/broad/compbio/aksarkar/projects/reprogen/"
-                                 "/home/unix/aksarkar/code/")
+      helm-locate-project-list '()
       helm-man-format-switches "%s"
       helm-recentf-fuzzy-match t
       )
