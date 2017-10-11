@@ -2,7 +2,11 @@
 (add-to-list 'custom-theme-load-path 
 	     "~/.emacs.d/vendor/solarized")
 (setq solarized-terminal-colors-for-daemon t)
-(load-theme 'solarized-light t)
+(if (daemonp)
+    (add-hook 'after-make-frame-functions
+              #'(lambda (f) (with-selected-frame f
+                              (load-theme 'solarized-light t))))
+  (load-theme 'solarized-light t))
 
 ; Set window title
 (setq frame-title-format '(buffer-file-name "%f - Emacs" "Emacs")) 
