@@ -112,4 +112,20 @@
 
 (add-hook 'org-mode-hook 'aksarkar-org-hook)
 
+(setq org-publish-project-alist
+      '(("nwas" . (:base-directory "/home/aksarkar/projects/nwas/docs"
+                                   :publishing-directory "/home/aksarkar/projects/nwas/docs"
+                                   :publishing-function org-html-publish-to-html
+                                   :auto-sitemap t
+                                   :sitemap-filename "index.org"
+                                   :sitemap-title "NWAS"
+                                   ))
+        ("singlecell" . (:base-directory "/home/aksarkar/projects/singlecell/docs"
+                                         :publishing-directory "/home/aksarkar/projects/singlecell/docs"
+                                         :publishing-function org-html-publish-to-html
+                                         :auto-sitemap t
+                                         :sitemap-filename "index.org"
+                                         :sitemap-title "Single cell"
+                                         ))))
+
 (provide 'aksarkar-org)
