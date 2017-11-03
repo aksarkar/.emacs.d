@@ -126,6 +126,10 @@
                                          :auto-sitemap t
                                          :sitemap-filename "index.org"
                                          :sitemap-title "Single cell"
-                                         ))))
+                                         ))
+        ("singlecell-qtl" . (:base-directory "/home/aksarkar/projects/singlecell-qtl/analysis/"
+                                             :publishing-directory "/home/aksarkar/projects/singlecell-qtl/docs/"
+                                             :publishing-function org-html-publish-to-html))
+        ))
 
 (provide 'aksarkar-org)
