@@ -113,13 +113,19 @@
 (add-hook 'org-mode-hook 'aksarkar-org-hook)
 
 (setq org-publish-project-alist
-      '(("nwas" . (:base-directory "/home/aksarkar/projects/nwas/docs"
+      '(("nwas-org" . (:base-directory "/home/aksarkar/projects/nwas/analysis"
                                    :publishing-directory "/home/aksarkar/projects/nwas/docs"
                                    :publishing-function org-html-publish-to-html
                                    :auto-sitemap t
                                    :sitemap-filename "index.org"
                                    :sitemap-title "NWAS"
                                    ))
+        ("nwas-fig" . (:base-directory "/home/aksarkar/projects/nwas/analysis"
+                                   :publishing-directory "/home/aksarkar/projects/nwas/docs"
+                                   :publishing-function org-publish-attachment
+                                   :base-extension "png"
+                                   ))
+        ("nwas" . (:components ("nwas-org" "nwas-fig")))
         ("singlecell" . (:base-directory "/home/aksarkar/projects/singlecell/docs"
                                          :publishing-directory "/home/aksarkar/projects/singlecell/docs"
                                          :publishing-function org-html-publish-to-html
@@ -127,9 +133,16 @@
                                          :sitemap-filename "index.org"
                                          :sitemap-title "Single cell"
                                          ))
-        ("singlecell-qtl" . (:base-directory "/home/aksarkar/projects/singlecell-qtl/analysis/"
+        ("singlecell-qtl-analysis" . (:base-directory "/home/aksarkar/projects/singlecell-qtl/analysis/"
                                              :publishing-directory "/home/aksarkar/projects/singlecell-qtl/docs/"
-                                             :publishing-function org-html-publish-to-html))
+                                             :publishing-function org-html-publish-to-html
+                                             :htmlized-source t))
+        ("singlecell-qtl-fig" . (:base-directory "/home/aksarkar/projects/singlecell-qtl/analysis/"
+                                                 :publishing-directory "/home/aksarkar/projects/singlecell-qtl/docs/"
+                                                 :base-extension "png"
+                                                 :publishing-function org-publish-attachment
+                                                 :recursive t))
+        ("singlecell-qtl" . (:components ("singlecell-qtl-analysis" "singlecell-qtl-fig")))
         ))
 
 (provide 'aksarkar-org)
