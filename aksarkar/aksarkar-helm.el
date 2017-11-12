@@ -5,9 +5,9 @@
 
 (helm-mode 1)
 
-(global-set-key (kbd "<f5>") 'projectile-command-map)
-(global-set-key (kbd "<f6>") 'helm-man-woman)
-(global-set-key (kbd "<f7>") 'helm-bibtex)
+(global-set-key (kbd "C-2") 'projectile-command-map)
+(global-set-key (kbd "C-3") 'helm-man-woman)
+(global-set-key (kbd "C-4") 'helm-bibtex)
 (global-set-key (kbd "C-M-i") 'ac-complete-with-helm)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x b") 'helm-mini)
