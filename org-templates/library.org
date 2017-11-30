@@ -1,0 +1,10 @@
+#+NAME: ipython3
+#+BEGIN_SRC shell :var memory="16G" :var runtime="6:00:00" :var partition="broadwl" :var venv=""
+  export venv=${venv:-root}
+  sbatch ${memory/#/--mem=} ${runtime/#/--time=} ${partition/#/--partition=} --job-name=ipython3 --output=ipython3.out
+  #!/bin/bash
+  set -e
+  source activate $venv
+  rm -f $HOME/.local/share/jupyter/runtime/kernel-aksarkar.json
+  ipython3 kernel --ip=$(hostname -i) -f kernel-aksarkar.json
+#+END_SRC
