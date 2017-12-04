@@ -116,9 +116,6 @@
       '(("nwas-org" . (:base-directory "/home/aksarkar/projects/nwas/analysis"
                                    :publishing-directory "/home/aksarkar/projects/nwas/docs"
                                    :publishing-function org-html-publish-to-html
-                                   :auto-sitemap t
-                                   :sitemap-filename "index.org"
-                                   :sitemap-title "NWAS"
                                    ))
         ("nwas-fig" . (:base-directory "/home/aksarkar/projects/nwas/analysis"
                                    :publishing-directory "/home/aksarkar/projects/nwas/docs"
@@ -143,6 +140,15 @@
                                                  :publishing-function org-publish-attachment
                                                  :recursive t))
         ("singlecell-qtl" . (:components ("singlecell-qtl-analysis" "singlecell-qtl-fig")))
+        ("sse-org" . (:base-directory "/home/aksarkar/projects/sse/org"
+                                      :publishing-directory "/home/aksarkar/projects/sse/docs"
+                                      :publishing-function org-html-publish-to-html
+                                      :htmlized-source t))
+        ("sse-fig" . (:base-directory "/home/aksarkar/projects/sse/org"
+                                      :publishing-directory "/home/aksarkar/projects/sse/docs"
+                                      :publishing-function org-publish-attachment
+                                      :base-extension "png"))
+        ("sse" . (:components ("sse-org" "sse-fig")))
         ))
 
 (provide 'aksarkar-org)
