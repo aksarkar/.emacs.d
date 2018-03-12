@@ -4,6 +4,7 @@
   sbatch ${memory/#/--mem=} ${runtime/#/--time=} ${partition/#/--partition=} $opts --job-name=ipython3-$venv --output=ipython3-$venv.out
   #!/bin/bash
   set -e
+  module load Anaconda3
   source activate $venv
   rm -f $HOME/.local/share/jupyter/runtime/kernel-$venv.json
   ipython3 kernel --ip=$(hostname -i) -f kernel-$venv.json
