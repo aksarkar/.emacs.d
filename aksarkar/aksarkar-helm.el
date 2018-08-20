@@ -19,14 +19,8 @@
 (define-key lisp-mode-map (kbd "C-M-i") 'helm-lisp-completion-at-point)
 
 (setq
- helm-M-x-fuzzy-match t
- helm-apropos-fuzzy-match t
- helm-buffers-fuzzy-matching t
- helm-completion-in-region-fuzzy-match t
- helm-file-cache-fuzzy-match t
- helm-lisp-fuzzy-completion t
- helm-locate-fuzzy-match t
- helm-recentf-fuzzy-match t
+ helm-mode-fuzzy-match t
+ helm-candidate-number-limit 50
  bibtex-completion-format-citation-functions '((org-mode . bibtex-completion-format-citation-cite)
                                          (latex-mode . bibtex-completion-format-citation-cite)
                                          (markdown-mode . bibtex-completion-format-citation-pandoc-citeproc)

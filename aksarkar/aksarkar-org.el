@@ -47,16 +47,16 @@
   ("\\section{%s}" . "\\section*{%s}")
   ("\\subsection{%s}" . "\\subsection*{%s}")
   ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
- ("aksarkar-beamer" "\\documentclass[aspectratio=1610,hyperref={},table]{beamer}\n\\mode<presentation>\n\\usefonttheme[onlymath]{serif}\n\\usecolortheme[named=black]{structure}\n\\useinnertheme{rectangles}\n\\setbeamertemplate{navigation symbols}{}\n\\setbeamertemplate{footline}[]\n[NO-DEFAULT-PACKAGES]\n\\usepackage[backend=biber,date=year,doi=false,isbn=false,style=authoryear,url=false]{biblatex}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}"
+ ("aksarkar-beamer" "\\documentclass[aspectratio=1610,hyperref={},table]{beamer}\n\\mode<presentation>\n\\usecolortheme[named=black]{structure}\n\\useinnertheme{rectangles}\n\\setbeamertemplate{navigation symbols}{}\n\\setbeamertemplate{footline}[]\n[NO-DEFAULT-PACKAGES]\n\\usepackage[backend=biber,date=year,doi=false,isbn=false,style=authoryear,url=false]{biblatex}\n\\addbibresource{/home/asarkar/research/mit/reading/reading.bib}"
   ("\\section{%s}" . "\\section*{%s}")))
       org-export-dispatch-use-expert-ui t)
 (setq org-latex-caption-above nil)
 
 (setq org-capture-templates
-      '(("n" "Lab notebook" entry (file+datetree "~/research/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep t)
+      '(("n" "Lab notebook" entry (file+olp+datetree "~/research/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep t)
         ("t" "Task" entry (file "~/research/todo.org") "* TODO")
-        ("i" "Interrupt" entry (file+datetree "~/research/notebook.org") nil :jump-to-captured t :clock-in t :clock-resume t)
-        ("p" "Paper" entry (file+datetree "~/research/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep nil :clock-resume t)
+        ("i" "Interrupt" entry (file+olp+datetree "~/research/notebook.org") nil :jump-to-captured t :clock-in t :clock-resume t)
+        ("p" "Paper" entry (file+olp+datetree "~/research/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep nil :clock-resume t)
         ("d" "Debit" plain (file "~/misc/account.txt") "%(org-read-date) %^{payee}
     expenses:%^{account}  %^{amount}
     assets:checking" :kill-buffer t)

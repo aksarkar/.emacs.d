@@ -16,7 +16,6 @@
 (require 'aksarkar-gui)
 (require 'aksarkar-haskell)
 (require 'aksarkar-helm)
-(require 'aksarkar-ledger)
 (require 'aksarkar-ibuffer)
 (require 'aksarkar-ispell)
 (require 'aksarkar-keyboard)
