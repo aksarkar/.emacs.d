@@ -8,6 +8,7 @@
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.org/packages/")))
 
+(require 'aksarkar-keyboard)
 (require 'aksarkar-browse)
 (require 'aksarkar-elfeed)
 (require 'aksarkar-eshell)
@@ -15,14 +16,11 @@
 (require 'aksarkar-git)
 (require 'aksarkar-gui)
 (require 'aksarkar-haskell)
+(require 'aksarkar-helm)
 (require 'aksarkar-ibuffer)
 (require 'aksarkar-ispell)
-(require 'aksarkar-keyboard)
-;; This needs to be here since aksarkar-keyboard unsets some keys
-(require 'aksarkar-helm)
 (require 'aksarkar-mu4e)
 (require 'aksarkar-org)
-(require 'aksarkar-rcirc)
 (require 'aksarkar-tex)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

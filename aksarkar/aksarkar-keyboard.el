@@ -1,6 +1,7 @@
 (require 'expand-region)
 (require 'misc)
 (require 'shell)
+(require 'shr)
 
 (defun aksarkar-shr-shell-command ()
   (interactive)
