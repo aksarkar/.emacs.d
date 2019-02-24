@@ -17,6 +17,7 @@
 (dotimes (n 10)
   (global-unset-key (kbd (format "C-%d" n)))
   (global-unset-key (kbd (format "M-%d" n))))
+(global-unset-key "\C-x\C-z")
 
 (global-set-key "\C-r" 'isearch-backward-regexp)
 (global-set-key "\C-s" 'isearch-forward-regexp)

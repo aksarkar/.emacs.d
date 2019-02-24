@@ -1,0 +1,12 @@
+#+AUTHOR: Abhishek Sarkar
+#+OPTIONS: h:2 toc:nil
+#+LATEX_CLASS: aksarkar-beamer
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{bm}
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{bayesnet}
+#+LATEX_HEADER: \usetikzlibrary{fit}
+#+LATEX_HEADER: \usetikzlibrary{positioning}
+#+LATEX_HEADER: \DeclareMathOperator\argmin{arg\,min}
+#+LATEX_HEADER: \AtBeginSection[]{\frame{\frametitle{Overview}\tableofcontents[current]}}

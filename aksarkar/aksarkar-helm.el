@@ -34,6 +34,7 @@
    ("bioRxiv" . "http://biorxiv.org/search/%s")
    ("Google Scholar" . "http://scholar.google.co.uk/scholar?q=%s")
    ("arXiv" . helm-bibtex-arxiv))
+ helm-show-completion-display-function nil
  )
 
 (provide 'aksarkar-helm)

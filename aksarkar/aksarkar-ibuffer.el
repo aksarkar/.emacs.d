@@ -6,6 +6,7 @@
       ibuffer-saved-filter-groups
       (quote
        (("default"
+         ("dired" (mode . dired-mode))
          ("elfeed" (name . "elfeed"))
          ("helm" (name . "helm"))
          ("irc" (mode . rcirc-mode))

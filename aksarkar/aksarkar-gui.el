@@ -108,6 +108,7 @@
   (interactive)
   (kill-buffer (current-buffer)))
 
+(require 'pdf-tools)
 (pdf-tools-install)
 
 (setq dired-dwim-target t)
