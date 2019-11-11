@@ -63,9 +63,9 @@
         ("c" "Credit" plain (file "~/misc/account.txt") "%(org-read-date) %^{payee}
     expenses:%^{account}  %^{amount}
     liabilities:visa" :kill-buffer t))
-      org-refile-targets '(("/home/asarkar/research/notebook.org" . (:maxlevel . 3))
-                           ("/home/asarkar/research/todo.org" . (:maxlevel . 3))
-                           ("/home/asarkar/misc/move/move.org" . (:maxlevel . 3)))
+      org-refile-targets '(("~/research/notebook.org" . (:maxlevel . 3))
+                           ("~/research/todo.org" . (:maxlevel . 3))
+                           ("~/misc/move/move.org" . (:maxlevel . 3)))
       org-refile-allow-creating-parent-nodes 'confirm)
 
 (defun aksarkar-beamer-bold (contents backend info)
