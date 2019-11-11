@@ -5,7 +5,7 @@
 ; External programs
 (setq org-file-apps
       '((auto-mode . emacs)
-        ("\\.pdf\\'" . "mupdf %s")
+        ("\\.pdf\\'" . "evince %s")
         ("\\.eps\\'" . "evince %s")))
 
 ; New link types
