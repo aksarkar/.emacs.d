@@ -111,6 +111,7 @@
 (require 'pdf-tools)
 (pdf-tools-install)
 
-(setq dired-dwim-target t)
+(setq dired-dwim-target t
+      dired-listing-switches "-alh")
 
 (provide 'aksarkar-gui)
