@@ -14,7 +14,7 @@
  message-send-mail-function 'smtpmail-send-it
  smtpmail-smtp-user "aksarkar"
  smtpmail-smtp-server "authsmtp.uchicago.edu"
- smtpmail-stream-type 'ssl
+ smtpmail-stream-type 'tls
  smtpmail-smtp-service 465
  message-signature "Abhishek Sarkar"
  mu4e-get-mail-command "mbsync -a"
