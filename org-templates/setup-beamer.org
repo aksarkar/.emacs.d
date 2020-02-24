@@ -1,5 +1,5 @@
 #+AUTHOR: Abhishek Sarkar
-#+OPTIONS: h:2 toc:nil
+#+OPTIONS: h:2 toc:nil ':t
 #+LATEX_CLASS: aksarkar-beamer
 #+LATEX_HEADER: \usepackage{amsmath}
 #+LATEX_HEADER: \usepackage{amssymb}
@@ -10,3 +10,4 @@
 #+LATEX_HEADER: \usetikzlibrary{positioning}
 #+LATEX_HEADER: \DeclareMathOperator\argmin{arg\,min}
 #+LATEX_HEADER: \AtBeginSection[]{\frame{\frametitle{Overview}\tableofcontents[current]}}
+#+LATEX_HEADER: \let\thefootnote\relax
