@@ -27,7 +27,10 @@
                                          (default . bibtex-completion-format-citation-default))
  helm-bibtex-pdf-symbol "p"
  helm-bibtex-pdf-open-function 'find-file
- helm-bibtex-bibliography '("~/research/mit/reading/reading.bib")
+ helm-bibtex-bibliography
+ '("~/research/mit/reading/reading.bib"
+   "~/research/uchicago/reading/bursting.bib"
+   "~/research/uchicago/reading/spatial.bib")
  helm-bibtex-library-path '("~/research/mit/reading" "~/misc/books/")
  helm-bibtex-fallback-options
  '(("PubMed" . "http://www.ncbi.nlm.nih.gov/pubmed/?term=%s")
