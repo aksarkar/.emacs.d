@@ -9,7 +9,8 @@
  '((emacs-lisp . t)
    (python . t)
    (ipython . t)
-   (shell . t)))
+   (shell . t)
+   (R . t)))
 ; External programs
 (setq org-file-apps
       '((auto-mode . emacs)
@@ -120,16 +121,10 @@
         ("nwas-fig" . (:base-directory "/project2/mstephens/aksarkar/projects/nwas/analysis"
                                    :publishing-directory "/project2/mstephens/aksarkar/projects/nwas/docs"
                                    :publishing-function org-publish-attachment
-                                   :base-extension "png"
+                                   :base-extension "png\\|\\|svg"
+                                   :recursive t
                                    ))
         ("nwas" . (:components ("nwas-org" "nwas-fig")))
-        ("singlecell-ideas" . (:base-directory "/project2/mstephens/aksarkar/projects/singlecell-ideas/docs"
-                                         :publishing-directory "/project2/mstephens/aksarkar/projects/singlecell-ideas/docs"
-                                         :publishing-function org-html-publish-to-html
-                                         :auto-sitemap t
-                                         :sitemap-filename "index.org"
-                                         :sitemap-title "Single cell"
-                                         ))
         ("singlecell-qtl-analysis" . (:base-directory "/project2/mstephens/aksarkar/projects/singlecell-qtl/analysis/"
                                              :publishing-directory "/project2/mstephens/aksarkar/projects/singlecell-qtl/docs/"
                                              :publishing-function org-html-publish-to-html
@@ -137,11 +132,10 @@
                                              :htmlized-source t))
         ("singlecell-qtl-fig" . (:base-directory "/project2/mstephens/aksarkar/projects/singlecell-qtl/analysis/"
                                                  :publishing-directory "/project2/mstephens/aksarkar/projects/singlecell-qtl/docs/"
-                                                 :base-extension "png"
+                                                 :base-extension "png\\|\\|svg"
                                                  :publishing-function org-publish-attachment
                                                  :recursive t))
-        ("singlecell-qtl" . (:components ("singlecell-qtl-analysis" "singlecell-qtl-fig")
-                                         :completion-function #'(lambda (args) ((shell-command "rsync -au /project2/mstephens/aksarkar/projects/singlecell-qtl/docs/ /home/aksarkar/public_html/singlecell-qtl/")))))
+        ("singlecell-qtl" . (:components ("singlecell-qtl-analysis" "singlecell-qtl-fig")))
         ("sse-org" . (:base-directory "/project2/mstephens/aksarkar/projects/sse/org"
                                       :publishing-directory "/project2/mstephens/aksarkar/projects/sse/docs"
                                       :publishing-function org-html-publish-to-html
@@ -152,5 +146,33 @@
                                       :base-extension "png"))
         ("sse" . (:components ("sse-org" "sse-fig")))
         ))
+
+(add-to-list 'org-structure-template-alist
+             '("S" "* Setup
+  :PROPERTIES:
+  :CUSTOM_ID: setup
+  :END:
+
+  #+BEGIN_SRC emacs-lisp :exports none
+    (add-to-list 'python-shell-completion-native-disabled-interpreters \"jupyter\")
+    (org-babel-lob-ingest \"/home/aksarkar/.emacs.d/org-templates/library.org\")
+  #+END_SRC
+
+  #+RESULTS:
+  : 1
+
+  #+CALL: ipython3() :exports none :dir /scratch/midway2/aksarkar
+
+  #+BEGIN_SRC ipython
+    %matplotlib inline
+    %config InlineBackend.figure_formats = set(['retina'])
+  #+END_SRC
+
+  #+BEGIN_SRC ipython
+    import matplotlib.pyplot as plt
+    plt.rcParams['figure.facecolor'] = 'w'
+    plt.rcParams['font.family'] = 'Nimbus Sans'
+  #+END_SRC
+"))
 
 (provide 'aksarkar-org)
