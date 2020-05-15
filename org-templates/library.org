@@ -1,11 +1,22 @@
 #+NAME: ipython3
-#+BEGIN_SRC shell :var memory="1G" :var runtime="6:00:00" :var partition="broadwl" :var venv="" :var opts=""
+#+BEGIN_SRC sh :var memory="1G" :var runtime="6:00:00" :var partition="broadwl" :var venv="" :var opts="" :var modules="" :results none :eval never-export
   export venv=${venv:-root}
   sbatch ${memory/#/--mem=} ${runtime/#/--time=} ${partition/#/--partition=} $opts --job-name=ipython3-$venv --output=ipython3-$venv.out
   #!/bin/bash
   set -e
-  module load Anaconda3
+  for m in "$modules"
+  do
+    module load $m
+  done
   source activate $venv
   rm -f $HOME/.local/share/jupyter/runtime/kernel-$venv.json
   ipython3 kernel --ip=$(hostname -i) -f kernel-$venv.json
+#+END_SRC
+
+#+NAME: tensorboard
+#+BEGIN_SRC sh :var logdir="" :results none :var venv=""
+  export venv=${venv:-root}
+  srun --pty --partition=mstephens bash
+  source activate $venv
+  tensorboard --host=$(hostname -i) --logdir=runs &
 #+END_SRC
