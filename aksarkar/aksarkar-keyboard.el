@@ -10,13 +10,6 @@
            (derived-mode-p 'comint-mode))
       (comint-previous-input 0)))
 
-(defun aksarkar/completion-in-region (start end collection &optional predicate)
-  (with-wrapper-hook
-      completion-in-region-functions (start end collection predicate)
-    (let ((minibuffer-completion-table collection)
-          (minibuffer-completion-predicate predicate))
-      (ivy-completing-read "Completion:" collection predicate))))
-
 (dotimes (n 10)
   (global-unset-key (kbd (format "C-%d" n)))
   (global-unset-key (kbd (format "M-%d" n))))
