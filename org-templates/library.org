@@ -14,9 +14,10 @@
 #+END_SRC
 
 #+NAME: tensorboard
-#+BEGIN_SRC sh :var logdir="" :results none :var venv=""
+#+BEGIN_SRC sh :var logdir="" :results none :var venv="" :session tensorboard
+  export logdir=${logdir:-runs}
   export venv=${venv:-root}
-  srun --pty --partition=mstephens bash
+  srun --pty --partition=mstephens --job-name=tensorboard bash
   source activate $venv
-  tensorboard --host=$(hostname -i) --logdir=runs &
+  tensorboard --host=$(hostname -i) --logdir=$logdir &
 #+END_SRC
