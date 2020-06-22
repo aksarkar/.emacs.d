@@ -174,5 +174,12 @@
     plt.rcParams['font.family'] = 'Nimbus Sans'
   #+END_SRC
 "))
+(add-to-list 'org-structure-template-alist
+             '("r" "#+BEGIN_SRC ipython
+  import rpy2.robjects.packages
+  import rpy2.robjects.pandas2ri
+  rpy2.robjects.pandas2ri.activate()
+#+END_SRC
+"))
 
 (provide 'aksarkar-org)
