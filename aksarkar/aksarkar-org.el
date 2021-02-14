@@ -1,6 +1,5 @@
 (require 'ox-beamer)
 (require 'ox-latex)
-(require 'org-bibtex)
 
 ; External programs
 (setq org-file-apps
@@ -57,15 +56,11 @@
         ("t" "Task" entry (file "~/research/todo.org") "* TODO")
         ("i" "Interrupt" entry (file+olp+datetree "~/research/notebook.org") nil :jump-to-captured t :clock-in t :clock-resume t)
         ("p" "Paper" entry (file+olp+datetree "~/research/notebook.org") nil :jump-to-captured t :clock-in t :clock-keep nil :clock-resume t)
-        ("d" "Debit" plain (file "~/misc/account.txt") "%(org-read-date) %^{payee}
-    expenses:%^{account}  %^{amount}
-    assets:checking" :kill-buffer t)
-        ("c" "Credit" plain (file "~/misc/account.txt") "%(org-read-date) %^{payee}
-    expenses:%^{account}  %^{amount}
-    liabilities:visa" :kill-buffer t))
+        )
       org-refile-targets '(("~/research/notebook.org" . (:maxlevel . 3))
                            ("~/research/todo.org" . (:maxlevel . 3))
-                           ("~/misc/move/move.org" . (:maxlevel . 3)))
+                           ("~/misc/move/move.org" . (:maxlevel . 3))
+                           ("/home/aksarkar/research/uchicago/apps/main.org" . (:maxlevel . 3)))
       org-refile-allow-creating-parent-nodes 'confirm)
 
 (defun aksarkar-beamer-bold (contents backend info)
@@ -73,11 +68,8 @@
     (replace-regexp-in-string "\\`\\\\[A-Za-z0-9]+" "\\\\textbf" contents)))
 (add-to-list 'org-export-filter-bold-functions 'aksarkar-beamer-bold)
 
-(setq org-latex-table-scientific-notation "%s\\times 10^{%s}"
+(setq org-latex-table-scientific-notation "\\(%s\\times 10^{%s}\\)"
       org-latex-pdf-process '("latexmk -silent -xelatex %f"))
-
-(setq org-bibtex-export-arbitrary-fields t
-      org-bibtex-prefix "BIB_")
 
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -90,10 +82,11 @@
 
 (add-hook 'org-mode-hook 'aksarkar-org-hook)
 
-(setq org-agenda-files '("~/research/notebook.org" "~/research/todo.org" "~/misc/move/move.org")
+(setq org-agenda-files '("~/research/notebook.org" "~/research/todo.org" "~/misc/move/move.org" "/home/aksarkar/research/uchicago/apps/main.org")
       org-agenda-span 'day
-      org-todo-keywords '((sequence "TODO" "|" "DONE" "WONTFIX(w)"))
-      org-latex-table-scientific-notation "\\(%s\\times 10^{%s}\\)"
+      org-todo-keywords '((sequence "TODO" "WAIT" "|" "DONE" "WONTFIX(w)"))
       )
+
+(setq org-descriptive-links nil)
 
 (provide 'aksarkar-org)
