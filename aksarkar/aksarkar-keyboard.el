@@ -3,6 +3,8 @@
 (require 'shell)
 (require 'shr)
 
+(setq comint-completion-addsuffix nil)
+
 (defun aksarkar-shr-shell-command ()
   (interactive)
   (let ((url (get-text-property (point) 'shr-url)))
