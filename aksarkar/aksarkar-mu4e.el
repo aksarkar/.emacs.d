@@ -20,15 +20,6 @@
  mu4e-get-mail-command "mbsync -a"
  mu4e-maildir "~/mail/"
  mu4e-compose-complete-only-personal nil
- mu4e-user-mail-address-list '("aksarkar@uchicago.edu"
-                               "aksarkar@broadinstitute.org"
-                               "aksarkar@alum.mit.edu"
-                               "aksarkar@mit.edu"
-                               "aksarkar@csail.mit.edu"
-                               "asarkar@cs.unc.edu"
-                               "asarkar@live.unc.edu"
-                               "sarkar.k.abhishek@gmail.com"
-                               "pyroclasm924@gmail.com")
  mu4e-reply-to-address "aksarkar@uchicago.edu"
  user-mail-address "aksarkar@uchicago.edu"
  user-full-name "Abhishek Sarkar")
