@@ -29,6 +29,7 @@
  helm-bibtex-pdf-open-function 'find-file
  helm-bibtex-bibliography
  '("~/research/mit/reading/reading.bib"
+   "~/research/uchicago/reading/sc.bib"
    "~/research/uchicago/reading/bursting.bib"
    "~/research/uchicago/reading/spatial.bib")
  helm-bibtex-library-path '("~/research/mit/reading" "~/misc/books/")
