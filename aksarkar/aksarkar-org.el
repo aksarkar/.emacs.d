@@ -182,4 +182,8 @@
 #+END_SRC
 "))
 
+(defun ob-ipython-unjam ()
+  (interactive)
+  (prin1-to-string (ob-ipython--dequeue 'ob-ipython--async-queue)))
+
 (provide 'aksarkar-org)
