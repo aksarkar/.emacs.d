@@ -4,9 +4,8 @@
 (let ((default-directory "~/.emacs.d/vendor/"))
   (normal-top-level-add-subdirs-to-load-path))
 
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-			 ("marmalade" . "http://marmalade-repo.org/packages/")			 
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("melpa" . "https://melpa.milkbox.net/packages/")))
 
 (require 'aksarkar-avy)
 (require 'aksarkar-git)
@@ -37,6 +36,11 @@
  '(safe-local-variable-values
    (quote
     ((org-publish-project-alist
+      ("singlecell-ideas-org" :base-directory "/scratch/midway2/aksarkar/singlecell-ideas/org" :publishing-directory "/scratch/midway2/aksarkar/singlecell-ideas/docs" :publishing-function org-html-publish-to-html :exclude "setup.org")
+      ("singlecell-ideas-fig" :base-directory "/scratch/midway2/aksarkar/singlecell-ideas/org" :publishing-directory "/scratch/midway2/aksarkar/singlecell-ideas/docs" :base-extension "png\\|\\|svg" :publishing-function org-publish-attachment :recursive t)
+      ("singlecell-ideas" :components
+       ("singlecell-ideas-org" "singlecell-ideas-fig")))
+     (org-publish-project-alist
       ("ideas-org" :base-directory "/project2/mstephens/aksarkar/projects/ideas/org" :publishing-directory "/project2/mstephens/aksarkar/projects/ideas/docs" :publishing-function org-html-publish-to-html :exclude "setup.org")
       ("ideas-fig" :base-directory "/project2/mstephens/aksarkar/projects/ideas/org" :publishing-directory "/project2/mstephens/aksarkar/projects/ideas/docs" :base-extension "png\\|\\|svg" :publishing-function org-publish-attachment :recursive t)
       ("ideas" :components
