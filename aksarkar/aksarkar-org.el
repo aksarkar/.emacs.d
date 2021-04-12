@@ -14,6 +14,9 @@
 (org-add-link-type "arxiv" 'aksarkar-org-arxiv-open)
 (defun aksarkar-org-arxiv-open (path)
   (browse-url (concat "http://arxiv.org/abs/" path)))
+(org-add-link-type "biorxiv"
+                   '((path)
+                     (browse-url (concat "https://www.biorxiv.org/content/" path))))
 
 ; Latex export
 (setq org-latex-default-packages-alist

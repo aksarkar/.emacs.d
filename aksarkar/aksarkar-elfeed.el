@@ -44,6 +44,7 @@
         "https://compmeta.wordpress.com/feed/"
         "https://danwang.co/?feed=rss"
         "https://donsbot.wordpress.com/feed/"
+        "https://encouragement.ghost.io/rss/"
         "https://everythingstudies.com/feed/"
         "https://geneticvariance.wordpress.com/feed/"
         "https://juliagalef.com/feed/"
