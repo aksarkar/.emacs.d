@@ -24,7 +24,7 @@
 (global-set-key "\M-h" 'er/expand-region)
 (global-set-key "\M-z" 'zap-up-to-char)
 (global-set-key (kbd "M-1") 'shell)
-(global-set-key (kbd "M-4") 'org-babel-execute-buffer)
+(global-set-key (kbd "M-4") 'bury-buffer)
 (global-set-key (kbd "<f2>") 'aksarkar-save-buffer-and-swap)
 
 (provide 'aksarkar-keyboard)
