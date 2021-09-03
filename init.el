@@ -5,7 +5,7 @@
   (normal-top-level-add-subdirs-to-load-path))
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("melpa" . "https://melpa.milkbox.net/packages/")))
+                         ("melpa" . "https://melpa.org/packages/")))
 
 (require 'aksarkar-avy)
 (require 'aksarkar-git)
