@@ -159,21 +159,15 @@
   #+END_SRC
 
   #+RESULTS:
-  : 1
 
   #+CALL: ipython3() :exports none :dir /scratch/midway2/aksarkar
 
   #+BEGIN_SRC ipython
-    %matplotlib inline
-    %config InlineBackend.figure_formats = set(['retina'])
-  #+END_SRC
-
-  #+BEGIN_SRC ipython
+    import matplotlib
     import matplotlib.pyplot as plt
-    plt.rcParams['figure.facecolor'] = 'w'
-    plt.rcParams['font.family'] = 'Nimbus Sans'
   #+END_SRC
 "))
+
 (add-to-list 'org-structure-template-alist
              '("r" "#+BEGIN_SRC ipython
   import rpy2.robjects.packages
