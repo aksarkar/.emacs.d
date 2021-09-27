@@ -1,5 +1,4 @@
 (require 'ox-beamer)
-(require 'ox-ipynb)
 (require 'ox-latex)
 (require 'org-install)
 
