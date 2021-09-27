@@ -85,7 +85,7 @@
 
 (add-hook 'org-mode-hook 'aksarkar-org-hook)
 
-(setq org-agenda-files '("~/research/notebook.org" "~/research/todo.org" "~/misc/move/move.org" "/home/aksarkar/research/uchicago/apps/main.org")
+(setq org-agenda-files '("~/research/notebook.org" "~/research/todo.org" "~/misc/move/move.org")
       org-agenda-span 'day
       org-todo-keywords '((sequence "TODO" "WAIT" "|" "DONE" "WONTFIX(w)"))
       )
