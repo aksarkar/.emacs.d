@@ -34,8 +34,6 @@
      ("avi" . "mpv")
      ("mp4" . "mpv")
      ("pdf" . "evince")))
- '(org-agenda-files
-   '("~/research/notebook.org" "~/research/todo.org" "~/misc/move/move.org" "~/research/uchicago/apps/main.org"))
  '(package-selected-packages
    '(pdf-tools markdown-mode magit helm-projectile helm-bibtex expand-region elfeed avy)))
 (custom-set-faces
