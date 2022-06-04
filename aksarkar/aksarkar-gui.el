@@ -69,7 +69,7 @@
 (column-number-mode 1)
 (display-time-mode t)
 (display-battery-mode 1)
-(setq battery-mode-line-format " (%p%%) ")
+(setq battery-mode-line-format "(%p%%) ")
 (setq-default mode-line-format
       '((line-number-mode " L%l ")
         (column-number-mode "C%c ")
