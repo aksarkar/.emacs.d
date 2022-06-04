@@ -20,9 +20,8 @@
 
 (defun aksarkar-eshell-hook ()
   (local-set-key (kbd "C-c C-v") 'browse-url-at-point)
-  ;; Important: eshell-mode-map isn't globally defined!
-  (define-key eshell-mode-map (kbd "M-r") 'helm-eshell-history)
-  (define-key eshell-mode-map (kbd "TAB") 'pcomplete))
+  (define-key eshell-hist-mode-map (kbd "M-r") 'helm-eshell-history)
+  (define-key eshell-cmpl-mode-map (kbd "TAB") 'helm-esh-pcomplete))
 
 (add-hook 'eshell-mode-hook 'aksarkar-eshell-hook)
 
