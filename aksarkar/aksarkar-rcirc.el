@@ -111,4 +111,12 @@
                                  'rcirc-browse-url-history default)
                 arg)))
 
+(advice-add 'rcirc-handler-CAP :filter-args
+ #'(lambda (all-args)
+     (let ((cap-args (nth 2 all-args)))
+       (while cap-args (if (string-match " +$" (car cap-args))
+                           (setcar cap-args (substring (car cap-args) 0 (match-beginning 0))))
+              (setq cap-args (cdr cap-args))))
+     all-args))
+
 (provide 'aksarkar-rcirc)
