@@ -31,6 +31,7 @@
 (global-set-key "\M-&" 'replace-regexp)
 (global-set-key "\M-h" 'er/expand-region)
 (global-set-key "\M-z" 'zap-up-to-char)
+(global-set-key "\M-4" 'bury-buffer)
 (global-set-key (kbd "C-M-`") #'(lambda () (interactive) (exchange-point-and-mark t)))
 (global-set-key (kbd "C-`") #'(lambda () (interactive) (push-mark)))
 (global-set-key (kbd "H-d") 'aksarkar-day)
