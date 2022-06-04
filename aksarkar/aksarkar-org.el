@@ -62,8 +62,7 @@
         )
       org-refile-targets '(("~/research/notebook.org" . (:maxlevel . 3))
                            ("~/research/todo.org" . (:maxlevel . 3))
-                           ("~/misc/move/move.org" . (:maxlevel . 3))
-                           ("/home/aksarkar/research/uchicago/apps/main.org" . (:maxlevel . 3)))
+                           ("~/misc/move/move.org" . (:maxlevel . 3)))
       org-refile-allow-creating-parent-nodes 'confirm)
 
 (defun aksarkar-beamer-bold (contents backend info)
