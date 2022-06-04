@@ -26,7 +26,7 @@
                                          (markdown-mode . bibtex-completion-format-citation-pandoc-citeproc)
                                          (default . bibtex-completion-format-citation-default))
  helm-bibtex-pdf-symbol "p"
- helm-bibtex-pdf-open-function 'find-file
+ helm-bibtex-pdf-open-function 'helm-open-file-with-default-tool
  helm-bibtex-bibliography
  '("~/research/mit/reading/reading.bib"
    "~/research/uchicago/reading/sc.bib"
