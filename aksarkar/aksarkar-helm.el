@@ -41,4 +41,6 @@
  helm-show-completion-display-function nil
  )
 
+(add-to-list 'helm-mode-no-completion-in-region-in-modes 'rcirc-mode)
+
 (provide 'aksarkar-helm)
