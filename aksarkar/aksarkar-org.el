@@ -84,11 +84,12 @@
 
 (add-hook 'org-mode-hook 'aksarkar-org-hook)
 
-(setq org-agenda-files '("~/research/notebook.org" "~/research/todo.org" "~/misc/move/move.org")
+(setq org-agenda-files '("~/research/notebook.org" "~/research/todo.org" "~/misc/move/move.org" "~/misc/money/money.org")
       org-agenda-span 'day
       org-todo-keywords '((sequence "TODO" "WAIT" "|" "DONE" "WONTFIX(w)"))
       )
 
-(setq org-descriptive-links nil)
+(setq org-descriptive-links nil
+      org-adapt-indentation t)
 
 (provide 'aksarkar-org)
