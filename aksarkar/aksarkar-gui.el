@@ -17,7 +17,7 @@
 
 ; Get around UNIX selection nonsense
 (setq x-select-enable-clipboard t)
-(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+(setq interprogram-paste-function 'x-selection-value)
 (setq save-interprogram-paste-before-kill t)
 
 ; Set window title
@@ -36,7 +36,7 @@
 (setq-default fill-column 79)
 
 ; Stop forcing me to spell out "yes"
-(fset 'yes-or-no-p 'y-or-n-p) 
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ; Put backups and autosaves in one place
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups/")))
@@ -108,7 +108,11 @@
   (interactive)
   (kill-buffer (current-buffer)))
 
+(setq use-short-answers t)
+
 (setq dired-dwim-target t
       dired-listing-switches "-alh")
+
+(setq native-comp-async-report-warnings-errors nil)
 
 (provide 'aksarkar-gui)
