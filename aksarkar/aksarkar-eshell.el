@@ -17,6 +17,7 @@
         eshell-term
         eshell-unix))
 (add-to-list 'eshell-visual-commands "journalctl")
+(add-to-list 'eshell-expand-input-functions 'eshell-expand-history-references)
 
 (defun aksarkar-eshell-hook ()
   (local-set-key (kbd "C-c C-v") 'browse-url-at-point)
