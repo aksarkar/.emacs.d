@@ -1,5 +1,4 @@
 (require 'helm-bibtex)
-(require 'helm-config)
 (require 'projectile)
 (projectile-global-mode)
 
@@ -31,8 +30,10 @@
  '("~/research/mit/reading/reading.bib"
    "~/research/uchicago/reading/sc.bib"
    "~/research/uchicago/reading/bursting.bib"
-   "~/research/uchicago/reading/spatial.bib")
- helm-bibtex-library-path '("~/research/mit/reading" "~/misc/books/")
+   "~/research/uchicago/reading/spatial.bib"
+   "~/research/personal/reading/reading.bib"
+   "~/research/personal/reading/genchem.bib")
+ helm-bibtex-library-path '("~/research/mit/reading" "~/research/personal/reading" "~/misc/books/")
  helm-bibtex-fallback-options
  '(("PubMed" . "http://www.ncbi.nlm.nih.gov/pubmed/?term=%s")
    ("bioRxiv" . "http://biorxiv.org/search/%s")
