@@ -2,12 +2,6 @@
 (require 'aksarkar-rcirc-auth)
 (require 'expand-region)
 
-(defadvice rcirc-markup-attributes (before rcirc-fix-italics activate)
-  "Fix italic control character"
-  (save-excursion
-    (while (re-search-forward "\C-]" nil t)
-      (replace-match "\C-v"))))
-
 (defun rcirc-strip-colors (&rest ignore)
   (while (re-search-forward "\C-c\\(\\([0-9][0-9]?,\\)?[0-9][0-9]?\\)?" nil t)
     (replace-match "")))
@@ -42,9 +36,9 @@
 
 (defun-rcirc-command prepend (topic)
   "Prepend to the topic"
-  (interactive "P")
-  (if (and (called-interactively-p 'interactive) topic)
-      (setq topic (read-string "New topic: ")))
+  (interactive "sNew topic: ")
+  ;; (if (and (called-interactively-p 'interactive) topic)
+  ;;     (setq topic (read-string "New topic: ")))
   (when (> (length topic) 0)
     (rcirc-send-string process (concat "TOPIC " target
                                        (concat " :" topic " | " rcirc-topic)))))
