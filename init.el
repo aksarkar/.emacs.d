@@ -36,7 +36,7 @@
      ("mp4" . "mpv")
      ("pdf" . "evince")))
  '(package-selected-packages
-   '(pdf-tools markdown-mode magit helm-projectile helm-bibtex expand-region elfeed avy)))
+   '(helm-comint ess python-mode org markdown-mode magit helm-projectile helm-bibtex expand-region elfeed avy))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

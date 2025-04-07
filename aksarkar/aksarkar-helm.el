@@ -1,4 +1,5 @@
 (require 'helm-bibtex)
+(require 'helm-comint)
 (require 'projectile)
 (projectile-global-mode)
 
